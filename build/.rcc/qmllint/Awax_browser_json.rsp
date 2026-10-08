@@ -1,0 +1,13 @@
+--bare
+-I
+/Users/sherazrajput/Cpp-Projects/Awax_browser/build
+-I
+/Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser
+-I
+/Users/sherazrajput/Cpp-Projects/Awax_browser/build
+-I
+/opt/homebrew/opt/qt/share/qt/qml
+--resource
+/Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/qmake_Awax_browser.qrc
+--json
+/Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser_qmllint.json

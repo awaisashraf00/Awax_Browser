@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/Awax_browser/">
+    <file alias="qml/qmldir">/Users/sherazrajput/Cpp-Projects/Awax_browser/build/qml/Awax_browser/qml/qmldir</file>
+  </qresource>
+</RCC>
+

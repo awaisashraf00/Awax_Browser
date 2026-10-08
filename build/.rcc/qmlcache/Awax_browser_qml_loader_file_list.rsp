@@ -1,0 +1,7 @@
+--resource
+/Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/qmake_Awax_browser.qrc
+--resource
+/Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/Awax_browser_raw_qml_0.qrc
+--resource
+/Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/Awax_browser_raw_qml_0_extra_qmldirs.qrc
+/qt/qml/Awax_browser/qml/Main.qml
