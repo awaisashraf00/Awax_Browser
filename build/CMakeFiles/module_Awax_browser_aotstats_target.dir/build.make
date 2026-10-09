@@ -69,6 +69,7 @@ include CMakeFiles/module_Awax_browser_aotstats_target.dir/progress.make
 CMakeFiles/module_Awax_browser_aotstats_target: .rcc/qmlcache/module_Awax_browser.aotstats
 
 .rcc/qmlcache/module_Awax_browser.aotstats: .rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.aotstats
+.rcc/qmlcache/module_Awax_browser.aotstats: .rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.aotstats
 .rcc/qmlcache/module_Awax_browser.aotstats: .rcc/qmlcache/module_Awax_browser.aotstatslist
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/module_Awax_browser.aotstats"
 	/opt/homebrew/opt/qt/share/qt/libexec/qmlaotstats aggregate /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/module_Awax_browser.aotstatslist /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/module_Awax_browser.aotstats
@@ -78,20 +79,36 @@ CMakeFiles/module_Awax_browser_aotstats_target: .rcc/qmlcache/module_Awax_browse
 .rcc/qmlcache/Awax_browser_qml/Main_qml.cpp: .qt/rcc/qmake_Awax_browser.qrc
 .rcc/qmlcache/Awax_browser_qml/Main_qml.cpp: .qt/rcc/Awax_browser_raw_qml_0.qrc
 .rcc/qmlcache/Awax_browser_qml/Main_qml.cpp: .qt/rcc/Awax_browser_raw_qml_0_extra_qmldirs.qrc
-.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp: qml/Awax_browser/Awax_browser.qmltypes
-.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp: qml/Awax_browser/qmldir
+.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp: Awax_browser/Awax_browser.qmltypes
+.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp: Awax_browser/qmldir
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating .rcc/qmlcache/Awax_browser_qml/Main_qml.cpp, .rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.aotstats"
 	/opt/homebrew/bin/cmake -E make_directory /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/Awax_browser_qml
-	/opt/homebrew/opt/qt/share/qt/libexec/qmlcachegen --bare --resource-path /qt/qml/Awax_browser/qml/Main.qml -I /Users/sherazrajput/Cpp-Projects/Awax_browser/build -I /opt/homebrew/opt/qt/share/qt/qml -i /Users/sherazrajput/Cpp-Projects/Awax_browser/build/qml/Awax_browser/qmldir --resource /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/qmake_Awax_browser.qrc --resource /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/Awax_browser_raw_qml_0.qrc --resource /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/Awax_browser_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=Awax_browser(Awax_browser)" -o /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp /Users/sherazrajput/Cpp-Projects/Awax_browser/qml/Main.qml
+	/opt/homebrew/opt/qt/share/qt/libexec/qmlcachegen --bare --resource-path /qt/qml/Awax_browser/qml/Main.qml -I /Users/sherazrajput/Cpp-Projects/Awax_browser/build -I /opt/homebrew/opt/qt/share/qt/qml -i /Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser/qmldir --resource /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/qmake_Awax_browser.qrc --resource /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/Awax_browser_raw_qml_0.qrc --resource /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/Awax_browser_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=Awax_browser(Awax_browser)" -o /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp /Users/sherazrajput/Cpp-Projects/Awax_browser/qml/Main.qml
 
 .rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.aotstats: .rcc/qmlcache/Awax_browser_qml/Main_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.aotstats
+
+.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp: /opt/homebrew/opt/qt/share/qt/libexec/qmlcachegen
+.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp: /Users/sherazrajput/Cpp-Projects/Awax_browser/qml/SearchArea/SearchArea.qml
+.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp: .qt/rcc/qmake_Awax_browser.qrc
+.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp: .qt/rcc/Awax_browser_raw_qml_0.qrc
+.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp: .qt/rcc/Awax_browser_raw_qml_0_extra_qmldirs.qrc
+.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp: Awax_browser/Awax_browser.qmltypes
+.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp: Awax_browser/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating .rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp, .rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.aotstats"
+	/opt/homebrew/bin/cmake -E make_directory /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/Awax_browser_qml/SearchArea
+	/opt/homebrew/opt/qt/share/qt/libexec/qmlcachegen --bare --resource-path /qt/qml/Awax_browser/qml/SearchArea/SearchArea.qml -I /Users/sherazrajput/Cpp-Projects/Awax_browser/build -I /opt/homebrew/opt/qt/share/qt/qml -i /Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser/qmldir --resource /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/qmake_Awax_browser.qrc --resource /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/Awax_browser_raw_qml_0.qrc --resource /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/Awax_browser_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=Awax_browser(Awax_browser)" -o /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp /Users/sherazrajput/Cpp-Projects/Awax_browser/qml/SearchArea/SearchArea.qml
+
+.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.aotstats: .rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.aotstats
 
 CMakeFiles/module_Awax_browser_aotstats_target.dir/codegen:
 .PHONY : CMakeFiles/module_Awax_browser_aotstats_target.dir/codegen
 
 module_Awax_browser_aotstats_target: .rcc/qmlcache/Awax_browser_qml/Main_qml.cpp
 module_Awax_browser_aotstats_target: .rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.aotstats
+module_Awax_browser_aotstats_target: .rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp
+module_Awax_browser_aotstats_target: .rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.aotstats
 module_Awax_browser_aotstats_target: .rcc/qmlcache/module_Awax_browser.aotstats
 module_Awax_browser_aotstats_target: CMakeFiles/module_Awax_browser_aotstats_target
 module_Awax_browser_aotstats_target: CMakeFiles/module_Awax_browser_aotstats_target.dir/build.make

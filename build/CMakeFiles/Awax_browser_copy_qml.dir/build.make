@@ -69,6 +69,8 @@ include CMakeFiles/Awax_browser_copy_qml.dir/progress.make
 CMakeFiles/Awax_browser_copy_qml: .qt/Awax_browser_qml.txt
 
 .qt/Awax_browser_qml.txt: /opt/homebrew/opt/qt/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
+.qt/Awax_browser_qml.txt: /Users/sherazrajput/Cpp-Projects/Awax_browser/qml/Main.qml
+.qt/Awax_browser_qml.txt: /Users/sherazrajput/Cpp-Projects/Awax_browser/qml/SearchArea/SearchArea.qml
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying Awax_browser qml sources into build dir"
 	/opt/homebrew/bin/cmake -DFILES_INFO_PATH=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/Awax_browser_qml.cmake -P /opt/homebrew/opt/qt/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
 

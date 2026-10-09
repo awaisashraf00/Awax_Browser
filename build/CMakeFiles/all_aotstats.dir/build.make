@@ -69,10 +69,10 @@ include CMakeFiles/all_aotstats.dir/progress.make
 CMakeFiles/all_aotstats: .rcc/qmlcache/all_aotstats.txt
 	/opt/homebrew/bin/cmake -E cat /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/all_aotstats.txt
 
-.rcc/qmlcache/all_aotstats.aotstats:
+.rcc/qmlcache/all_aotstats.aotstats: .rcc/qmlcache/module_Awax_browser.aotstats
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/all_aotstats.aotstats, .rcc/qmlcache/all_aotstats.txt"
 	/opt/homebrew/opt/qt/share/qt/libexec/qmlaotstats aggregate /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/all_aotstats.aotstatslist /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/all_aotstats.aotstats
-	/opt/homebrew/opt/qt/share/qt/libexec/qmlaotstats format /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/all_aotstats.aotstats /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/all_aotstats.txt --empty-modules /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/aotstats_empty_modules.txt
+	/opt/homebrew/opt/qt/share/qt/libexec/qmlaotstats format /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/all_aotstats.aotstats /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/all_aotstats.txt
 
 .rcc/qmlcache/all_aotstats.txt: .rcc/qmlcache/all_aotstats.aotstats
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/all_aotstats.txt

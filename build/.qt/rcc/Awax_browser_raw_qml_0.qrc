@@ -1,6 +1,7 @@
 <RCC>
   <qresource prefix="/qt/qml/Awax_browser/">
     <file alias="qml/Main.qml">/Users/sherazrajput/Cpp-Projects/Awax_browser/qml/Main.qml</file>
+    <file alias="qml/SearchArea/SearchArea.qml">/Users/sherazrajput/Cpp-Projects/Awax_browser/qml/SearchArea/SearchArea.qml</file>
   </qresource>
 </RCC>
 

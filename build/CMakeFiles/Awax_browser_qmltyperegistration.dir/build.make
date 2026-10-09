@@ -72,8 +72,8 @@ CMakeFiles/Awax_browser_qmltyperegistration: Awax_browser/Awax_browser.qmltypes
 awax_browser_qmltyperegistrations.cpp: qmltypes/Awax_browser_foreign_types.txt
 awax_browser_qmltyperegistrations.cpp: meta_types/qt6awax_browser_metatypes.json
 awax_browser_qmltyperegistrations.cpp: /opt/homebrew/opt/qt/share/qt/libexec/qmltyperegistrar
-awax_browser_qmltyperegistrations.cpp: /opt/homebrew/opt/qt/share/qt/metatypes/qt6qml_metatypes.json
 awax_browser_qmltyperegistrations.cpp: /opt/homebrew/opt/qt/share/qt/metatypes/qt6core_metatypes.json
+awax_browser_qmltyperegistrations.cpp: /opt/homebrew/opt/qt/share/qt/metatypes/qt6qml_metatypes.json
 awax_browser_qmltyperegistrations.cpp: /opt/homebrew/opt/qt/share/qt/metatypes/qt6network_metatypes.json
 awax_browser_qmltyperegistrations.cpp: /opt/homebrew/opt/qt/share/qt/metatypes/qt6gui_metatypes.json
 awax_browser_qmltyperegistrations.cpp: /opt/homebrew/opt/qt/share/qt/metatypes/qt6quick_metatypes.json

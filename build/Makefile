@@ -156,123 +156,6 @@ all_qmltyperegistrations/fast:
 .PHONY : all_qmltyperegistrations/fast
 
 #=============================================================================
-# Target rules for targets named Awax_browser_other_files
-
-# Build rule for target.
-Awax_browser_other_files: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Awax_browser_other_files
-.PHONY : Awax_browser_other_files
-
-# fast build rule for target.
-Awax_browser_other_files/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser_other_files.dir/build.make CMakeFiles/Awax_browser_other_files.dir/build
-.PHONY : Awax_browser_other_files/fast
-
-#=============================================================================
-# Target rules for targets named Awax_browser_qmllint
-
-# Build rule for target.
-Awax_browser_qmllint: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Awax_browser_qmllint
-.PHONY : Awax_browser_qmllint
-
-# fast build rule for target.
-Awax_browser_qmllint/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser_qmllint.dir/build.make CMakeFiles/Awax_browser_qmllint.dir/build
-.PHONY : Awax_browser_qmllint/fast
-
-#=============================================================================
-# Target rules for targets named Awax_browser_qmllint_json
-
-# Build rule for target.
-Awax_browser_qmllint_json: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Awax_browser_qmllint_json
-.PHONY : Awax_browser_qmllint_json
-
-# fast build rule for target.
-Awax_browser_qmllint_json/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser_qmllint_json.dir/build.make CMakeFiles/Awax_browser_qmllint_json.dir/build
-.PHONY : Awax_browser_qmllint_json/fast
-
-#=============================================================================
-# Target rules for targets named Awax_browser_qmllint_module
-
-# Build rule for target.
-Awax_browser_qmllint_module: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Awax_browser_qmllint_module
-.PHONY : Awax_browser_qmllint_module
-
-# fast build rule for target.
-Awax_browser_qmllint_module/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser_qmllint_module.dir/build.make CMakeFiles/Awax_browser_qmllint_module.dir/build
-.PHONY : Awax_browser_qmllint_module/fast
-
-#=============================================================================
-# Target rules for targets named all_qmllint
-
-# Build rule for target.
-all_qmllint: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_qmllint
-.PHONY : all_qmllint
-
-# fast build rule for target.
-all_qmllint/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_qmllint.dir/build.make CMakeFiles/all_qmllint.dir/build
-.PHONY : all_qmllint/fast
-
-#=============================================================================
-# Target rules for targets named all_qmllint_json
-
-# Build rule for target.
-all_qmllint_json: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_qmllint_json
-.PHONY : all_qmllint_json
-
-# fast build rule for target.
-all_qmllint_json/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_qmllint_json.dir/build.make CMakeFiles/all_qmllint_json.dir/build
-.PHONY : all_qmllint_json/fast
-
-#=============================================================================
-# Target rules for targets named all_qmllint_module
-
-# Build rule for target.
-all_qmllint_module: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_qmllint_module
-.PHONY : all_qmllint_module
-
-# fast build rule for target.
-all_qmllint_module/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_qmllint_module.dir/build.make CMakeFiles/all_qmllint_module.dir/build
-.PHONY : all_qmllint_module/fast
-
-#=============================================================================
-# Target rules for targets named dump_qml_context_properties
-
-# Build rule for target.
-dump_qml_context_properties: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dump_qml_context_properties
-.PHONY : dump_qml_context_properties
-
-# fast build rule for target.
-dump_qml_context_properties/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dump_qml_context_properties.dir/build.make CMakeFiles/dump_qml_context_properties.dir/build
-.PHONY : dump_qml_context_properties/fast
-
-#=============================================================================
-# Target rules for targets named clean_qml_context_properties
-
-# Build rule for target.
-clean_qml_context_properties: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean_qml_context_properties
-.PHONY : clean_qml_context_properties
-
-# fast build rule for target.
-clean_qml_context_properties/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_qml_context_properties.dir/build.make CMakeFiles/clean_qml_context_properties.dir/build
-.PHONY : clean_qml_context_properties/fast
-
-#=============================================================================
 # Target rules for targets named Awax_browser_copy_qml
 
 # Build rule for target.
@@ -312,6 +195,19 @@ generate_qmlls_build_ini_file/fast:
 .PHONY : generate_qmlls_build_ini_file/fast
 
 #=============================================================================
+# Target rules for targets named module_Awax_browser_aotstats_target
+
+# Build rule for target.
+module_Awax_browser_aotstats_target: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 module_Awax_browser_aotstats_target
+.PHONY : module_Awax_browser_aotstats_target
+
+# fast build rule for target.
+module_Awax_browser_aotstats_target/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/module_Awax_browser_aotstats_target.dir/build.make CMakeFiles/module_Awax_browser_aotstats_target.dir/build
+.PHONY : module_Awax_browser_aotstats_target/fast
+
+#=============================================================================
 # Target rules for targets named all_aotstats
 
 # Build rule for target.
@@ -323,6 +219,19 @@ all_aotstats: cmake_check_build_system
 all_aotstats/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_aotstats.dir/build.make CMakeFiles/all_aotstats.dir/build
 .PHONY : all_aotstats/fast
+
+#=============================================================================
+# Target rules for targets named Awax_browser_qmlimportscan
+
+# Build rule for target.
+Awax_browser_qmlimportscan: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Awax_browser_qmlimportscan
+.PHONY : Awax_browser_qmlimportscan
+
+# fast build rule for target.
+Awax_browser_qmlimportscan/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser_qmlimportscan.dir/build.make CMakeFiles/Awax_browser_qmlimportscan.dir/build
+.PHONY : Awax_browser_qmlimportscan/fast
 
 #=============================================================================
 # Target rules for targets named Awax_browser_autogen_timestamp_deps
@@ -398,6 +307,54 @@ awax_browser_qmltyperegistrations.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/awax_browser_qmltyperegistrations.cpp.s
 .PHONY : awax_browser_qmltyperegistrations.cpp.s
 
+build/.qt/rcc/qrc_Awax_browser_raw_qml_0.o: build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.o
+.PHONY : build/.qt/rcc/qrc_Awax_browser_raw_qml_0.o
+
+# target to build an object file
+build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.o
+.PHONY : build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.o
+
+build/.qt/rcc/qrc_Awax_browser_raw_qml_0.i: build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.i
+.PHONY : build/.qt/rcc/qrc_Awax_browser_raw_qml_0.i
+
+# target to preprocess a source file
+build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.i
+.PHONY : build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.i
+
+build/.qt/rcc/qrc_Awax_browser_raw_qml_0.s: build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.s
+.PHONY : build/.qt/rcc/qrc_Awax_browser_raw_qml_0.s
+
+# target to generate assembly for a file
+build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.s
+.PHONY : build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.s
+
+build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.o: build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.o
+.PHONY : build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.o
+
+# target to build an object file
+build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.o
+.PHONY : build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.o
+
+build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.i: build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.i
+.PHONY : build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.i
+
+# target to preprocess a source file
+build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.i
+.PHONY : build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.i
+
+build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.s: build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.s
+.PHONY : build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.s
+
+# target to generate assembly for a file
+build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.s
+.PHONY : build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.s
+
 build/.qt/rcc/qrc_qmake_Awax_browser.o: build/.qt/rcc/qrc_qmake_Awax_browser.cpp.o
 .PHONY : build/.qt/rcc/qrc_qmake_Awax_browser.o
 
@@ -421,6 +378,78 @@ build/.qt/rcc/qrc_qmake_Awax_browser.s: build/.qt/rcc/qrc_qmake_Awax_browser.cpp
 build/.qt/rcc/qrc_qmake_Awax_browser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_qmake_Awax_browser.cpp.s
 .PHONY : build/.qt/rcc/qrc_qmake_Awax_browser.cpp.s
+
+build/.rcc/qmlcache/Awax_browser_qml/Main_qml.o: build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/Awax_browser_qml/Main_qml.o
+
+# target to build an object file
+build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.o
+
+build/.rcc/qmlcache/Awax_browser_qml/Main_qml.i: build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/Awax_browser_qml/Main_qml.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.i
+
+build/.rcc/qmlcache/Awax_browser_qml/Main_qml.s: build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/Awax_browser_qml/Main_qml.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.s
+
+build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.o: build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.o
+
+# target to build an object file
+build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o
+
+build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.i: build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.i
+
+build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.s: build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.s
+
+build/.rcc/qmlcache/Awax_browser_qmlcache_loader.o: build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o
+.PHONY : build/.rcc/qmlcache/Awax_browser_qmlcache_loader.o
+
+# target to build an object file
+build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o
+.PHONY : build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o
+
+build/.rcc/qmlcache/Awax_browser_qmlcache_loader.i: build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.i
+.PHONY : build/.rcc/qmlcache/Awax_browser_qmlcache_loader.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.i
+.PHONY : build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.i
+
+build/.rcc/qmlcache/Awax_browser_qmlcache_loader.s: build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.s
+.PHONY : build/.rcc/qmlcache/Awax_browser_qmlcache_loader.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.s
+.PHONY : build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -458,19 +487,12 @@ help:
 	@echo "... Awax_browser_autogen_timestamp_deps"
 	@echo "... Awax_browser_copy_qml"
 	@echo "... Awax_browser_copy_res"
-	@echo "... Awax_browser_other_files"
-	@echo "... Awax_browser_qmllint"
-	@echo "... Awax_browser_qmllint_json"
-	@echo "... Awax_browser_qmllint_module"
+	@echo "... Awax_browser_qmlimportscan"
 	@echo "... Awax_browser_qmltyperegistration"
 	@echo "... all_aotstats"
-	@echo "... all_qmllint"
-	@echo "... all_qmllint_json"
-	@echo "... all_qmllint_module"
 	@echo "... all_qmltyperegistrations"
-	@echo "... clean_qml_context_properties"
-	@echo "... dump_qml_context_properties"
 	@echo "... generate_qmlls_build_ini_file"
+	@echo "... module_Awax_browser_aotstats_target"
 	@echo "... Awax_browser"
 	@echo "... Awax_browser_autogen/mocs_compilation.o"
 	@echo "... Awax_browser_autogen/mocs_compilation.i"
@@ -478,9 +500,24 @@ help:
 	@echo "... awax_browser_qmltyperegistrations.o"
 	@echo "... awax_browser_qmltyperegistrations.i"
 	@echo "... awax_browser_qmltyperegistrations.s"
+	@echo "... build/.qt/rcc/qrc_Awax_browser_raw_qml_0.o"
+	@echo "... build/.qt/rcc/qrc_Awax_browser_raw_qml_0.i"
+	@echo "... build/.qt/rcc/qrc_Awax_browser_raw_qml_0.s"
+	@echo "... build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.o"
+	@echo "... build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.i"
+	@echo "... build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.s"
 	@echo "... build/.qt/rcc/qrc_qmake_Awax_browser.o"
 	@echo "... build/.qt/rcc/qrc_qmake_Awax_browser.i"
 	@echo "... build/.qt/rcc/qrc_qmake_Awax_browser.s"
+	@echo "... build/.rcc/qmlcache/Awax_browser_qml/Main_qml.o"
+	@echo "... build/.rcc/qmlcache/Awax_browser_qml/Main_qml.i"
+	@echo "... build/.rcc/qmlcache/Awax_browser_qml/Main_qml.s"
+	@echo "... build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.o"
+	@echo "... build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.i"
+	@echo "... build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.s"
+	@echo "... build/.rcc/qmlcache/Awax_browser_qmlcache_loader.o"
+	@echo "... build/.rcc/qmlcache/Awax_browser_qmlcache_loader.i"
+	@echo "... build/.rcc/qmlcache/Awax_browser_qmlcache_loader.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
