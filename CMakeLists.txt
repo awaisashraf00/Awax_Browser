@@ -14,6 +14,8 @@ qt_standard_project_setup(REQUIRES 6.8)
 
 qt_add_executable(Awax_browser
     src/main.cpp
+    src/url/URL.cpp
+    src/url/URL.h
 )
 
 qt_add_qml_module(Awax_browser

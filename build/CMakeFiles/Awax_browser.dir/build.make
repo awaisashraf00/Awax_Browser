@@ -189,10 +189,24 @@ CMakeFiles/Awax_browser.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Awax_browser.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sherazrajput/Cpp-Projects/Awax_browser/src/main.cpp -o CMakeFiles/Awax_browser.dir/src/main.cpp.s
 
+CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o: CMakeFiles/Awax_browser.dir/flags.make
+CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o: /Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.cpp
+CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o: CMakeFiles/Awax_browser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o -MF CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o.d -o CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o -c /Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.cpp
+
+CMakeFiles/Awax_browser.dir/src/url/URL.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Awax_browser.dir/src/url/URL.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.cpp > CMakeFiles/Awax_browser.dir/src/url/URL.cpp.i
+
+CMakeFiles/Awax_browser.dir/src/url/URL.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Awax_browser.dir/src/url/URL.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.cpp -o CMakeFiles/Awax_browser.dir/src/url/URL.cpp.s
+
 CMakeFiles/Awax_browser.dir/awax_browser_qmltyperegistrations.cpp.o: CMakeFiles/Awax_browser.dir/flags.make
 CMakeFiles/Awax_browser.dir/awax_browser_qmltyperegistrations.cpp.o: awax_browser_qmltyperegistrations.cpp
 CMakeFiles/Awax_browser.dir/awax_browser_qmltyperegistrations.cpp.o: CMakeFiles/Awax_browser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Awax_browser.dir/awax_browser_qmltyperegistrations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Awax_browser.dir/awax_browser_qmltyperegistrations.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Awax_browser.dir/awax_browser_qmltyperegistrations.cpp.o -MF CMakeFiles/Awax_browser.dir/awax_browser_qmltyperegistrations.cpp.o.d -o CMakeFiles/Awax_browser.dir/awax_browser_qmltyperegistrations.cpp.o -c /Users/sherazrajput/Cpp-Projects/Awax_browser/build/awax_browser_qmltyperegistrations.cpp
 
 CMakeFiles/Awax_browser.dir/awax_browser_qmltyperegistrations.cpp.i: cmake_force
@@ -206,7 +220,7 @@ CMakeFiles/Awax_browser.dir/awax_browser_qmltyperegistrations.cpp.s: cmake_force
 CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_qmake_Awax_browser.cpp.o: CMakeFiles/Awax_browser.dir/flags.make
 CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_qmake_Awax_browser.cpp.o: .qt/rcc/qrc_qmake_Awax_browser.cpp
 CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_qmake_Awax_browser.cpp.o: CMakeFiles/Awax_browser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_qmake_Awax_browser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_qmake_Awax_browser.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_qmake_Awax_browser.cpp.o -MF CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_qmake_Awax_browser.cpp.o.d -o CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_qmake_Awax_browser.cpp.o -c /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/qrc_qmake_Awax_browser.cpp
 
 CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_qmake_Awax_browser.cpp.i: cmake_force
@@ -220,7 +234,7 @@ CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_qmake_Awax_browser.cpp.s: cmake_fo
 CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o: CMakeFiles/Awax_browser.dir/flags.make
 CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o: .rcc/qmlcache/Awax_browser_qmlcache_loader.cpp
 CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o: CMakeFiles/Awax_browser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o -MF CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o.d -o CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o -c /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp
 
 CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.i: cmake_force
@@ -234,7 +248,7 @@ CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp
 CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.o: CMakeFiles/Awax_browser.dir/flags.make
 CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.o: .rcc/qmlcache/Awax_browser_qml/Main_qml.cpp
 CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.o: CMakeFiles/Awax_browser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.o -MF CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.o.d -o CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.o -c /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp
 
 CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.i: cmake_force
@@ -248,7 +262,7 @@ CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/Main_qml.cpp.s:
 CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o: CMakeFiles/Awax_browser.dir/flags.make
 CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o: .rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp
 CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o: CMakeFiles/Awax_browser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o -MF CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o.d -o CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o -c /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp
 
 CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.i: cmake_force
@@ -262,7 +276,7 @@ CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/Sear
 CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.o: CMakeFiles/Awax_browser.dir/flags.make
 CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.o: .qt/rcc/qrc_Awax_browser_raw_qml_0.cpp
 CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.o: CMakeFiles/Awax_browser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.o -MF CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.o.d -o CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.o -c /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp
 
 CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.i: cmake_force
@@ -276,7 +290,7 @@ CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0.cpp.s: cmak
 CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.o: CMakeFiles/Awax_browser.dir/flags.make
 CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.o: .qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp
 CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.o: CMakeFiles/Awax_browser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.o -MF CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.o.d -o CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.o -c /Users/sherazrajput/Cpp-Projects/Awax_browser/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp
 
 CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldirs.cpp.i: cmake_force
@@ -291,6 +305,7 @@ CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_Awax_browser_raw_qml_0_extra_qmldi
 Awax_browser_OBJECTS = \
 "CMakeFiles/Awax_browser.dir/Awax_browser_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/Awax_browser.dir/src/main.cpp.o" \
+"CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o" \
 "CMakeFiles/Awax_browser.dir/awax_browser_qmltyperegistrations.cpp.o" \
 "CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_qmake_Awax_browser.cpp.o" \
 "CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o" \
@@ -304,6 +319,7 @@ Awax_browser_EXTERNAL_OBJECTS =
 
 bin/Awax_browser: CMakeFiles/Awax_browser.dir/Awax_browser_autogen/mocs_compilation.cpp.o
 bin/Awax_browser: CMakeFiles/Awax_browser.dir/src/main.cpp.o
+bin/Awax_browser: CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o
 bin/Awax_browser: CMakeFiles/Awax_browser.dir/awax_browser_qmltyperegistrations.cpp.o
 bin/Awax_browser: CMakeFiles/Awax_browser.dir/build/.qt/rcc/qrc_qmake_Awax_browser.cpp.o
 bin/Awax_browser: CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o
@@ -320,7 +336,7 @@ bin/Awax_browser: /opt/homebrew/opt/qt/lib/QtQml.framework/Versions/A/QtQml
 bin/Awax_browser: /opt/homebrew/opt/qt/lib/QtNetwork.framework/Versions/A/QtNetwork
 bin/Awax_browser: /opt/homebrew/opt/qt/lib/QtCore.framework/Versions/A/QtCore
 bin/Awax_browser: CMakeFiles/Awax_browser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable bin/Awax_browser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable bin/Awax_browser"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Awax_browser.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

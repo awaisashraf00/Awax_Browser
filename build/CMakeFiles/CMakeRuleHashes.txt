@@ -8,6 +8,7 @@ e2d110771064505301e7317483c6e485 .qt/qml_imports/Awax_browser_build.cmake
 52c60935090fc367cfba6ac63e03d199 .qt/rcc/qrc_qmake_Awax_browser.cpp
 069499165e6aeae6733178bb57b84095 .rcc/qmlcache/Awax_browser_qml/Main_qml.cpp
 885bb7dbe4732cdb3b172f0931cfe8ee .rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp
+79deba15d66e9ff78abdb1325887a4b7 .rcc/qmlcache/Awax_browser_qml/SearchArea_qml.cpp
 e09fb96826379f95c8a7662e89dad56e .rcc/qmlcache/Awax_browser_qmlcache_loader.cpp
 c34118e22cc1c56905d73ca01ba0f437 .rcc/qmlcache/all_aotstats.aotstats
 2a6aee80e8e64730518eab20fdefed2f .rcc/qmlcache/module_Awax_browser.aotstats

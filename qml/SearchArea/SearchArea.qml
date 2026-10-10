@@ -1,0 +1,51 @@
+import QtQuick 2.15
+import QtQuick.Window 2.15
+import QtQuick
+
+Rectangle {
+    height: 100
+    color: "#333333"
+
+    Rectangle {
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.leftMargin: 30
+        anchors.rightMargin: 10
+        height: 30
+        color: "#C7C5C5"
+        radius: 15
+        border.color: "#888888"
+        border.width: 1
+
+        Text {
+            anchors.left: parent.left
+            anchors.leftMargin: 14
+            anchors.verticalCenter: parent.verticalCenter
+            text: "Search anything"
+            color: "#525252"
+            visible: searchInput.text.length === 0
+        }
+
+        TextInput {
+            id: searchInput
+            anchors.fill: parent
+            anchors.leftMargin: 14
+            anchors.rightMargin: 14
+            color: "#202020"
+            font.pixelSize: 14
+            verticalAlignment: TextInput.AlignVCenter
+            clip: true
+            selectByMouse: true
+
+            Keys.onEscapePressed: {
+                text = ""
+                focus = false
+            }
+            Keys.onEnterPressed: {
+                
+                focus = false
+            }
+        }
+    }
+}

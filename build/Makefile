@@ -475,6 +475,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/url/URL.o: src/url/URL.cpp.o
+.PHONY : src/url/URL.o
+
+# target to build an object file
+src/url/URL.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o
+.PHONY : src/url/URL.cpp.o
+
+src/url/URL.i: src/url/URL.cpp.i
+.PHONY : src/url/URL.i
+
+# target to preprocess a source file
+src/url/URL.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/url/URL.cpp.i
+.PHONY : src/url/URL.cpp.i
+
+src/url/URL.s: src/url/URL.cpp.s
+.PHONY : src/url/URL.s
+
+# target to generate assembly for a file
+src/url/URL.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/url/URL.cpp.s
+.PHONY : src/url/URL.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -521,6 +545,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/url/URL.o"
+	@echo "... src/url/URL.i"
+	@echo "... src/url/URL.s"
 .PHONY : help
 
 
