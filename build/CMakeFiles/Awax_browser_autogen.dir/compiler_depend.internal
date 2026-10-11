@@ -755,6 +755,8 @@
  /Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles/4.2.1/CMakeCXXCompiler.cmake
  /Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles/4.2.1/CMakeSystem.cmake
  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/main.cpp
+ /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/DnsResolver.cpp
+ /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/DnsResolver.h
  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/HttpClient.cpp
  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/HttpClient.h
  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.cpp

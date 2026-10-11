@@ -1599,6 +1599,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/DnsResolver.h",
+			"MU",
+			"UFQQIFJZKK/moc_DnsResolver.cpp",
+			null
+		],
+		[
 			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/HttpClient.h",
 			"MU",
 			"UFQQIFJZKK/moc_HttpClient.cpp",
@@ -1619,7 +1625,6 @@
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
 		"QT_NETWORK_LIB",
-		"QT_NO_DEBUG",
 		"QT_OPENGL_LIB",
 		"QT_QMLINTEGRATION_LIB",
 		"QT_QML_LIB",
@@ -1709,6 +1714,11 @@
 	[
 		[
 			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/DnsResolver.cpp",
 			"MU",
 			null
 		],

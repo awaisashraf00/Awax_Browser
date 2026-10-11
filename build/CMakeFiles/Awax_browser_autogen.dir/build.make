@@ -71,7 +71,7 @@ CMakeFiles/Awax_browser_autogen: Awax_browser_autogen/timestamp
 Awax_browser_autogen/timestamp: /opt/homebrew/opt/qt/share/qt/libexec/moc
 Awax_browser_autogen/timestamp: CMakeFiles/Awax_browser_autogen.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target Awax_browser"
-	/opt/homebrew/bin/cmake -E cmake_autogen /Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles/Awax_browser_autogen.dir/AutogenInfo.json ""
+	/opt/homebrew/bin/cmake -E cmake_autogen /Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles/Awax_browser_autogen.dir/AutogenInfo.json Debug
 	/opt/homebrew/bin/cmake -E touch /Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser_autogen/timestamp
 
 CMakeFiles/Awax_browser_autogen.dir/codegen:

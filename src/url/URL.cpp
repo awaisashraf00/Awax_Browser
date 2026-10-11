@@ -10,9 +10,6 @@ bool URL::parse(const QString &raw)
 {
     m_parsed = ParsedUrl{};
 
-    // Whitespace and control characters need percent-encoding, which
-    // is a later phase -- for now anything containing them is
-    // rejected outright so garbage never reaches the network.
     QString s = raw.trimmed();
     if (s.isEmpty()) {
         qDebug() << "URL: empty input";
@@ -42,7 +39,7 @@ bool URL::parse(const QString &raw)
     // Fragment: the FIRST '#' starts it; everything after belongs to
     // the fragment even if it contains '?' or '/'.
     const qsizetype hash = rest.indexOf('#');
-    if (hash != -1) {
+    if (hash != -1) {   
         m_parsed.fragment = rest.mid(hash + 1);
         rest.truncate(hash);
     }
@@ -57,6 +54,7 @@ bool URL::parse(const QString &raw)
 
     // Authority vs path: the first '/' ends the authority
     // (host[:port]) and starts the path.
+
     QString authority = rest;
     const qsizetype slash = rest.indexOf('/');
     if (slash != -1) {
@@ -101,6 +99,7 @@ bool URL::parse(const QString &raw)
              << m_parsed.port << m_parsed.path
              << "query:" << m_parsed.query
              << "fragment:" << m_parsed.fragment;
+            
     return true;
 }
 
@@ -109,7 +108,12 @@ void URL::url_write(const QString &new_url)
     if (new_url == m_url) {
         return;
     }
+
     m_url = new_url;
-    parse(m_url);
+
+    const bool ok = parse(m_url);
     emit url_changed(m_url);
+    if (ok) {
+        emit navigationRequested(m_parsed);
+    }
 }

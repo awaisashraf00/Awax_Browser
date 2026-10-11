@@ -39,6 +39,19 @@
                         "lineNumber": 33,
                         "name": "url_changed",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "url",
+                                "type": "ParsedUrl"
+                            }
+                        ],
+                        "index": 1,
+                        "lineNumber": 34,
+                        "name": "navigationRequested",
+                        "returnType": "void"
                     }
                 ],
                 "superClasses": [
@@ -50,6 +63,24 @@
             }
         ],
         "inputFile": "URL.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "DnsResolver",
+                "lineNumber": 5,
+                "object": true,
+                "qualifiedClassName": "DnsResolver",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "DnsResolver.h",
         "outputRevision": 69
     }
 ]

@@ -18,6 +18,8 @@ qt_add_executable(Awax_browser
     src/url/URL.h
     src/network/HttpClient.h
     src/network/HttpClient.cpp
+    src/network/DnsResolver.h
+    src/network/DnsResolver.cpp
 )
 
 qt_add_qml_module(Awax_browser

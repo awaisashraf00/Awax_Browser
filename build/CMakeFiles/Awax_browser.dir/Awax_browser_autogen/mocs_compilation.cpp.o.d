@@ -1,7 +1,7 @@
 CMakeFiles/Awax_browser.dir/Awax_browser_autogen/mocs_compilation.cpp.o: \
   /Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser_autogen/mocs_compilation.cpp \
-  /Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser_autogen/7IRV43PKB2/moc_URL.cpp \
-  /Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser_autogen/7IRV43PKB2/../../../src/url/URL.h \
+  /Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser_autogen/UFQQIFJZKK/moc_DnsResolver.cpp \
+  /Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser_autogen/UFQQIFJZKK/../../../src/network/DnsResolver.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobjectdefs.h \
@@ -936,7 +936,9 @@ CMakeFiles/Awax_browser.dir/Awax_browser_autogen/mocs_compilation.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QString \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QtTypes \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtmochelpers.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtmocconstants.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20algorithm.h
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20algorithm.h \
+  /Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser_autogen/7IRV43PKB2/moc_URL.cpp \
+  /Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser_autogen/7IRV43PKB2/../../../src/url/URL.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QtTypes

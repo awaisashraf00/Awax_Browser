@@ -31,8 +31,9 @@ public:
 
 signals:
     void url_changed(const QString &url);
+    void navigationRequested(const ParsedUrl &url);
 
 private:
-    QString m_url;       // exactly what the user typed, for display
-    ParsedUrl m_parsed;  // result of the last parse() call
+    QString m_url;       
+    ParsedUrl m_parsed;
 };

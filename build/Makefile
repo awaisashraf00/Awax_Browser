@@ -524,6 +524,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/network/DnsResolver.o: src/network/DnsResolver.cpp.o
+.PHONY : src/network/DnsResolver.o
+
+# target to build an object file
+src/network/DnsResolver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/DnsResolver.cpp.o
+.PHONY : src/network/DnsResolver.cpp.o
+
+src/network/DnsResolver.i: src/network/DnsResolver.cpp.i
+.PHONY : src/network/DnsResolver.i
+
+# target to preprocess a source file
+src/network/DnsResolver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/DnsResolver.cpp.i
+.PHONY : src/network/DnsResolver.cpp.i
+
+src/network/DnsResolver.s: src/network/DnsResolver.cpp.s
+.PHONY : src/network/DnsResolver.s
+
+# target to generate assembly for a file
+src/network/DnsResolver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/DnsResolver.cpp.s
+.PHONY : src/network/DnsResolver.cpp.s
+
 src/network/HttpClient.o: src/network/HttpClient.cpp.o
 .PHONY : src/network/HttpClient.o
 
@@ -673,6 +697,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/network/DnsResolver.o"
+	@echo "... src/network/DnsResolver.i"
+	@echo "... src/network/DnsResolver.s"
 	@echo "... src/network/HttpClient.o"
 	@echo "... src/network/HttpClient.i"
 	@echo "... src/network/HttpClient.s"

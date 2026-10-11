@@ -4,16 +4,16 @@ import QtQuick
 
 Rectangle {
     id: searchAreaRoot
-    height: 100
-    color: "#333333"
+    height: 150
+    color: "Black"
     property var backend
     Rectangle {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.verticalCenter: parent.verticalCenter
-        anchors.leftMargin: 30
+        anchors.leftMargin: 100
         anchors.rightMargin: 10
-        height: 30
+        height: 50
         color: "#C7C5C5"
         radius: 15
         border.color: "#888888"
