@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp" "CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o" "gcc" "CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qml/SearchArea/SearchArea_qml.cpp.o.d"
   "/Users/sherazrajput/Cpp-Projects/Awax_browser/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp" "CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o" "gcc" "CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.o.d"
   "/Users/sherazrajput/Cpp-Projects/Awax_browser/src/main.cpp" "CMakeFiles/Awax_browser.dir/src/main.cpp.o" "gcc" "CMakeFiles/Awax_browser.dir/src/main.cpp.o.d"
+  "/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/HttpClient.cpp" "CMakeFiles/Awax_browser.dir/src/network/HttpClient.cpp.o" "gcc" "CMakeFiles/Awax_browser.dir/src/network/HttpClient.cpp.o.d"
   "/Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.cpp" "CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o" "gcc" "CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o.d"
   )
 

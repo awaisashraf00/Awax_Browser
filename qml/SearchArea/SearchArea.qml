@@ -3,9 +3,10 @@ import QtQuick.Window 2.15
 import QtQuick
 
 Rectangle {
+    id: searchAreaRoot
     height: 100
     color: "#333333"
-
+    property var backend
     Rectangle {
         anchors.left: parent.left
         anchors.right: parent.right
@@ -42,9 +43,9 @@ Rectangle {
                 text = ""
                 focus = false
             }
-            Keys.onEnterPressed: {
-                
-                focus = false
+            onAccepted: {
+                searchAreaRoot.backend.url = searchInput.text
+                searchInput.focus = false
             }
         }
     }

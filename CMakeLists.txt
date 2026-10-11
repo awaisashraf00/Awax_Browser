@@ -16,6 +16,8 @@ qt_add_executable(Awax_browser
     src/main.cpp
     src/url/URL.cpp
     src/url/URL.h
+    src/network/HttpClient.h
+    src/network/HttpClient.cpp
 )
 
 qt_add_qml_module(Awax_browser
@@ -47,3 +49,16 @@ target_link_libraries(Awax_browser PRIVATE
     Qt6::Quick
     Qt6::QuickControls2
 )
+
+# Standalone test executable for the URL parsing stage. It links only
+# Qt6::Core (no GUI) so it runs fast and keeps the parser testable
+# without launching the browser window.
+enable_testing()
+add_executable(test_url
+    tests/test_url.cpp
+    src/url/URL.cpp
+    src/url/URL.h
+)
+target_include_directories(test_url PRIVATE src/url)
+target_link_libraries(test_url PRIVATE Qt6::Core)
+add_test(NAME url COMMAND test_url)

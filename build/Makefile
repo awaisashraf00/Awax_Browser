@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/sherazrajput/Cpp-Projects/Awax_browser/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -182,6 +192,19 @@ Awax_browser_copy_res/fast:
 .PHONY : Awax_browser_copy_res/fast
 
 #=============================================================================
+# Target rules for targets named test_url
+
+# Build rule for target.
+test_url: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_url
+.PHONY : test_url
+
+# fast build rule for target.
+test_url/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_url.dir/build.make CMakeFiles/test_url.dir/build
+.PHONY : test_url/fast
+
+#=============================================================================
 # Target rules for targets named generate_qmlls_build_ini_file
 
 # Build rule for target.
@@ -258,6 +281,32 @@ Awax_browser_autogen: cmake_check_build_system
 Awax_browser_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser_autogen.dir/build.make CMakeFiles/Awax_browser_autogen.dir/build
 .PHONY : Awax_browser_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_url_autogen_timestamp_deps
+
+# Build rule for target.
+test_url_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_url_autogen_timestamp_deps
+.PHONY : test_url_autogen_timestamp_deps
+
+# fast build rule for target.
+test_url_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_url_autogen_timestamp_deps.dir/build.make CMakeFiles/test_url_autogen_timestamp_deps.dir/build
+.PHONY : test_url_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named test_url_autogen
+
+# Build rule for target.
+test_url_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_url_autogen
+.PHONY : test_url_autogen
+
+# fast build rule for target.
+test_url_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_url_autogen.dir/build.make CMakeFiles/test_url_autogen.dir/build
+.PHONY : test_url_autogen/fast
 
 Awax_browser_autogen/mocs_compilation.o: Awax_browser_autogen/mocs_compilation.cpp.o
 .PHONY : Awax_browser_autogen/mocs_compilation.o
@@ -475,12 +524,37 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/network/HttpClient.o: src/network/HttpClient.cpp.o
+.PHONY : src/network/HttpClient.o
+
+# target to build an object file
+src/network/HttpClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/HttpClient.cpp.o
+.PHONY : src/network/HttpClient.cpp.o
+
+src/network/HttpClient.i: src/network/HttpClient.cpp.i
+.PHONY : src/network/HttpClient.i
+
+# target to preprocess a source file
+src/network/HttpClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/HttpClient.cpp.i
+.PHONY : src/network/HttpClient.cpp.i
+
+src/network/HttpClient.s: src/network/HttpClient.cpp.s
+.PHONY : src/network/HttpClient.s
+
+# target to generate assembly for a file
+src/network/HttpClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/HttpClient.cpp.s
+.PHONY : src/network/HttpClient.cpp.s
+
 src/url/URL.o: src/url/URL.cpp.o
 .PHONY : src/url/URL.o
 
 # target to build an object file
 src/url/URL.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_url.dir/build.make CMakeFiles/test_url.dir/src/url/URL.cpp.o
 .PHONY : src/url/URL.cpp.o
 
 src/url/URL.i: src/url/URL.cpp.i
@@ -489,6 +563,7 @@ src/url/URL.i: src/url/URL.cpp.i
 # target to preprocess a source file
 src/url/URL.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/url/URL.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_url.dir/build.make CMakeFiles/test_url.dir/src/url/URL.cpp.i
 .PHONY : src/url/URL.cpp.i
 
 src/url/URL.s: src/url/URL.cpp.s
@@ -497,7 +572,56 @@ src/url/URL.s: src/url/URL.cpp.s
 # target to generate assembly for a file
 src/url/URL.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/url/URL.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_url.dir/build.make CMakeFiles/test_url.dir/src/url/URL.cpp.s
 .PHONY : src/url/URL.cpp.s
+
+test_url_autogen/mocs_compilation.o: test_url_autogen/mocs_compilation.cpp.o
+.PHONY : test_url_autogen/mocs_compilation.o
+
+# target to build an object file
+test_url_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_url.dir/build.make CMakeFiles/test_url.dir/test_url_autogen/mocs_compilation.cpp.o
+.PHONY : test_url_autogen/mocs_compilation.cpp.o
+
+test_url_autogen/mocs_compilation.i: test_url_autogen/mocs_compilation.cpp.i
+.PHONY : test_url_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+test_url_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_url.dir/build.make CMakeFiles/test_url.dir/test_url_autogen/mocs_compilation.cpp.i
+.PHONY : test_url_autogen/mocs_compilation.cpp.i
+
+test_url_autogen/mocs_compilation.s: test_url_autogen/mocs_compilation.cpp.s
+.PHONY : test_url_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+test_url_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_url.dir/build.make CMakeFiles/test_url.dir/test_url_autogen/mocs_compilation.cpp.s
+.PHONY : test_url_autogen/mocs_compilation.cpp.s
+
+tests/test_url.o: tests/test_url.cpp.o
+.PHONY : tests/test_url.o
+
+# target to build an object file
+tests/test_url.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_url.dir/build.make CMakeFiles/test_url.dir/tests/test_url.cpp.o
+.PHONY : tests/test_url.cpp.o
+
+tests/test_url.i: tests/test_url.cpp.i
+.PHONY : tests/test_url.i
+
+# target to preprocess a source file
+tests/test_url.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_url.dir/build.make CMakeFiles/test_url.dir/tests/test_url.cpp.i
+.PHONY : tests/test_url.cpp.i
+
+tests/test_url.s: tests/test_url.cpp.s
+.PHONY : tests/test_url.s
+
+# target to generate assembly for a file
+tests/test_url.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_url.dir/build.make CMakeFiles/test_url.dir/tests/test_url.cpp.s
+.PHONY : tests/test_url.cpp.s
 
 # Help Target
 help:
@@ -507,6 +631,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... Awax_browser_autogen"
 	@echo "... Awax_browser_autogen_timestamp_deps"
 	@echo "... Awax_browser_copy_qml"
@@ -517,7 +642,10 @@ help:
 	@echo "... all_qmltyperegistrations"
 	@echo "... generate_qmlls_build_ini_file"
 	@echo "... module_Awax_browser_aotstats_target"
+	@echo "... test_url_autogen"
+	@echo "... test_url_autogen_timestamp_deps"
 	@echo "... Awax_browser"
+	@echo "... test_url"
 	@echo "... Awax_browser_autogen/mocs_compilation.o"
 	@echo "... Awax_browser_autogen/mocs_compilation.i"
 	@echo "... Awax_browser_autogen/mocs_compilation.s"
@@ -545,9 +673,18 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/network/HttpClient.o"
+	@echo "... src/network/HttpClient.i"
+	@echo "... src/network/HttpClient.s"
 	@echo "... src/url/URL.o"
 	@echo "... src/url/URL.i"
 	@echo "... src/url/URL.s"
+	@echo "... test_url_autogen/mocs_compilation.o"
+	@echo "... test_url_autogen/mocs_compilation.i"
+	@echo "... test_url_autogen/mocs_compilation.s"
+	@echo "... tests/test_url.o"
+	@echo "... tests/test_url.i"
+	@echo "... tests/test_url.s"
 .PHONY : help
 
 

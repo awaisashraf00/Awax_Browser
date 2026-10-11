@@ -1009,4 +1009,8 @@ CMakeFiles/Awax_browser.dir/src/main.cpp.o: \
   /opt/homebrew/opt/qt/lib/QtQml.framework/Headers/qqmlregistration.h \
   /opt/homebrew/opt/qt/include/QtQmlIntegration/qqmlintegration.h \
   /opt/homebrew/opt/qt/lib/QtQml.framework/Headers/qqmlerror.h \
-  /opt/homebrew/opt/qt/lib/QtQml.framework/Headers/qqmlabstracturlinterceptor.h
+  /opt/homebrew/opt/qt/lib/QtQml.framework/Headers/qqmlabstracturlinterceptor.h \
+  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QObject \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QtTypes

@@ -11,6 +11,7 @@ Window {
     
     SearchArea{
         id: searchArea
+        backend : Main_Url
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
