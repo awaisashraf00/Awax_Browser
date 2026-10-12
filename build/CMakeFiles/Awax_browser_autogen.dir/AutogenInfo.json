@@ -1599,6 +1599,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/browser/Browser.h",
+			"MU",
+			"5BOHB5NVT4/moc_Browser.cpp",
+			null
+		],
+		[
 			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/DnsResolver.h",
 			"MU",
 			"UFQQIFJZKK/moc_DnsResolver.cpp",
@@ -1608,6 +1614,18 @@
 			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/HttpClient.h",
 			"MU",
 			"UFQQIFJZKK/moc_HttpClient.cpp",
+			null
+		],
+		[
+			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Server.h",
+			"MU",
+			"UFQQIFJZKK/moc_Server.cpp",
+			null
+		],
+		[
+			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Socket.h",
+			"MU",
+			"UFQQIFJZKK/moc_Socket.cpp",
 			null
 		],
 		[
@@ -1713,6 +1731,11 @@
 	"SOURCES" : 
 	[
 		[
+			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/browser/Browser.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/main.cpp",
 			"MU",
 			null
@@ -1724,6 +1747,16 @@
 		],
 		[
 			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/HttpClient.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Server.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Socket.cpp",
 			"MU",
 			null
 		],

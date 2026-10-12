@@ -751,11 +751,17 @@ Awax_browser_autogen/timestamp: \
 	/Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser_autogen/moc_predefs.h \
 	/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles/4.2.1/CMakeCXXCompiler.cmake \
 	/Users/sherazrajput/Cpp-Projects/Awax_browser/build/CMakeFiles/4.2.1/CMakeSystem.cmake \
+	/Users/sherazrajput/Cpp-Projects/Awax_browser/src/browser/Browser.cpp \
+	/Users/sherazrajput/Cpp-Projects/Awax_browser/src/browser/Browser.h \
 	/Users/sherazrajput/Cpp-Projects/Awax_browser/src/main.cpp \
 	/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/DnsResolver.cpp \
 	/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/DnsResolver.h \
 	/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/HttpClient.cpp \
 	/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/HttpClient.h \
+	/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Server.cpp \
+	/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Server.h \
+	/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Socket.cpp \
+	/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Socket.h \
 	/Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.cpp \
 	/Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.h \
 	/opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/QObject \

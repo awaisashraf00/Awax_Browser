@@ -1,4 +1,5 @@
 #include <DnsResolver.h>
+#include <Browser.h>
 #include <URL.h>
 #include <QDebug>
 #include <QGuiApplication>
@@ -10,16 +11,11 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
 
-    URL url;
-    DnsResolver dns;
+    BROWSER Browser;
+    Browser.RUN();
 
-    QObject::connect(&url, &URL::navigationRequested,
-                     &dns, [&dns](const ParsedUrl &parsed) {
-                         dns.resolve(parsed.host);
-                     });
-
-    engine.rootContext()->setContextProperty("Main_Url", &url);
-    engine.loadFromModule("Awax_browser", "Main");
+    engine.rootContext()->setContextProperty("Main_Url", &Browser.Give_Url_address());
+    engine.loadFromModule("Awax_browser", "Main");  
     
     if (engine.rootObjects().isEmpty()){return -1;}
 

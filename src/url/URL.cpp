@@ -1,4 +1,5 @@
 #include "URL.h"
+#include <ProtocolPorts.h>
 #include <QDebug>
 
 URL::URL(QObject *parent)
@@ -44,16 +45,11 @@ bool URL::parse(const QString &raw)
         rest.truncate(hash);
     }
 
-    // Query: the first '?' in what remains (order matters -- see the
-    // fragment step above).
     const qsizetype qmark = rest.indexOf('?');
     if (qmark != -1) {
         m_parsed.query = rest.mid(qmark + 1);
         rest.truncate(qmark);
     }
-
-    // Authority vs path: the first '/' ends the authority
-    // (host[:port]) and starts the path.
 
     QString authority = rest;
     const qsizetype slash = rest.indexOf('/');
@@ -61,7 +57,6 @@ bool URL::parse(const QString &raw)
         m_parsed.path = rest.mid(slash);
         authority = rest.left(slash);
     }
-    // An HTTP request needs at least "/" as its request target.
     if (m_parsed.path.isEmpty()) {
         m_parsed.path = "/";
     }
@@ -81,17 +76,14 @@ bool URL::parse(const QString &raw)
             m_parsed.port = static_cast<quint16>(port);
         }
     }
-
-    // Host is mandatory and case-insensitive per the URL spec.
     if (host.isEmpty()) {
         qDebug() << "URL: missing host";
         return false;
     }
     m_parsed.host = host.toLower();
 
-    // Apply scheme defaults so DNS/TCP always receive a real port.
     if (m_parsed.port == 0) {
-        m_parsed.port = (m_parsed.scheme == "https") ? 443 : 80;
+        m_parsed.port = (m_parsed.scheme == "https") ? HTTPS_PORT : HTTP_PORT;
     }
 
     m_parsed.isValid = true;

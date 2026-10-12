@@ -21,7 +21,7 @@ class URL : public QObject
     Q_PROPERTY(QString url READ url WRITE url_write NOTIFY url_changed)
 
 public:
-    explicit URL(QObject *parent = nullptr);
+    URL(QObject *parent = nullptr);
 
     QString url() const { return m_url; }
     const ParsedUrl &parsed() const { return m_parsed; }

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QObject>
+#include <QHostAddress>
 #include <QString>
 class DnsResolver : public QObject
 {
@@ -12,7 +13,7 @@ public:
 
 signals:
     
-    // void resolved(const QString &host, const QString &address);
+    void resolved(int port_num,const QHostAddress &address);
     // void failed(const QString &host, const QString &reason);
 
 private:

@@ -500,6 +500,30 @@ build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.s
 .PHONY : build/.rcc/qmlcache/Awax_browser_qmlcache_loader.cpp.s
 
+src/browser/Browser.o: src/browser/Browser.cpp.o
+.PHONY : src/browser/Browser.o
+
+# target to build an object file
+src/browser/Browser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/browser/Browser.cpp.o
+.PHONY : src/browser/Browser.cpp.o
+
+src/browser/Browser.i: src/browser/Browser.cpp.i
+.PHONY : src/browser/Browser.i
+
+# target to preprocess a source file
+src/browser/Browser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/browser/Browser.cpp.i
+.PHONY : src/browser/Browser.cpp.i
+
+src/browser/Browser.s: src/browser/Browser.cpp.s
+.PHONY : src/browser/Browser.s
+
+# target to generate assembly for a file
+src/browser/Browser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/browser/Browser.cpp.s
+.PHONY : src/browser/Browser.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -571,6 +595,54 @@ src/network/HttpClient.s: src/network/HttpClient.cpp.s
 src/network/HttpClient.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/HttpClient.cpp.s
 .PHONY : src/network/HttpClient.cpp.s
+
+src/network/Server.o: src/network/Server.cpp.o
+.PHONY : src/network/Server.o
+
+# target to build an object file
+src/network/Server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/Server.cpp.o
+.PHONY : src/network/Server.cpp.o
+
+src/network/Server.i: src/network/Server.cpp.i
+.PHONY : src/network/Server.i
+
+# target to preprocess a source file
+src/network/Server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/Server.cpp.i
+.PHONY : src/network/Server.cpp.i
+
+src/network/Server.s: src/network/Server.cpp.s
+.PHONY : src/network/Server.s
+
+# target to generate assembly for a file
+src/network/Server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/Server.cpp.s
+.PHONY : src/network/Server.cpp.s
+
+src/network/Socket.o: src/network/Socket.cpp.o
+.PHONY : src/network/Socket.o
+
+# target to build an object file
+src/network/Socket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/Socket.cpp.o
+.PHONY : src/network/Socket.cpp.o
+
+src/network/Socket.i: src/network/Socket.cpp.i
+.PHONY : src/network/Socket.i
+
+# target to preprocess a source file
+src/network/Socket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/Socket.cpp.i
+.PHONY : src/network/Socket.cpp.i
+
+src/network/Socket.s: src/network/Socket.cpp.s
+.PHONY : src/network/Socket.s
+
+# target to generate assembly for a file
+src/network/Socket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/Socket.cpp.s
+.PHONY : src/network/Socket.cpp.s
 
 src/url/URL.o: src/url/URL.cpp.o
 .PHONY : src/url/URL.o
@@ -694,6 +766,9 @@ help:
 	@echo "... build/.rcc/qmlcache/Awax_browser_qmlcache_loader.o"
 	@echo "... build/.rcc/qmlcache/Awax_browser_qmlcache_loader.i"
 	@echo "... build/.rcc/qmlcache/Awax_browser_qmlcache_loader.s"
+	@echo "... src/browser/Browser.o"
+	@echo "... src/browser/Browser.i"
+	@echo "... src/browser/Browser.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -703,6 +778,12 @@ help:
 	@echo "... src/network/HttpClient.o"
 	@echo "... src/network/HttpClient.i"
 	@echo "... src/network/HttpClient.s"
+	@echo "... src/network/Server.o"
+	@echo "... src/network/Server.i"
+	@echo "... src/network/Server.s"
+	@echo "... src/network/Socket.o"
+	@echo "... src/network/Socket.i"
+	@echo "... src/network/Socket.s"
 	@echo "... src/url/URL.o"
 	@echo "... src/url/URL.i"
 	@echo "... src/url/URL.s"

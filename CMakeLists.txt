@@ -19,7 +19,11 @@ qt_add_executable(Awax_browser
     src/network/HttpClient.h
     src/network/HttpClient.cpp
     src/network/DnsResolver.h
-    src/network/DnsResolver.cpp
+    src/network/DnsResolver.cpp 
+    src/network/Server.h
+    src/network/Server.cpp
+    src/browser/Browser.cpp
+    src/browser/Browser.h
 )
 
 qt_add_qml_module(Awax_browser
@@ -61,6 +65,6 @@ add_executable(test_url
     src/url/URL.cpp
     src/url/URL.h
 )
-target_include_directories(test_url PRIVATE src/url)
+target_include_directories(test_url PRIVATE src/url src/network)
 target_link_libraries(test_url PRIVATE Qt6::Core)
 add_test(NAME url COMMAND test_url)

@@ -1,3 +1,5 @@
+#include <Socket.h>
+
 class HttpClient
 {
 private:
