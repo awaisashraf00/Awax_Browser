@@ -1,9 +1,0 @@
-{
-    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
-    "qt-core.qtInstallationRoot": "/opt/homebrew/opt/qt",
-    "qt-qml.qmlls.customExePath": "/opt/homebrew/opt/qt/bin/qmlls",
-    "qt-qml.qmlls.additionalImportPaths": [
-        "/opt/homebrew/share/qt/qml"
-    ],
-    "qt-qml.qmlls.enabled": true
-}

@@ -1,4 +1,0 @@
-set(__QT_DEPLOY_TARGET_Awax_browser_FILE /Users/sherazrajput/Cpp-Projects/Awax_browser/build/bin/Awax_browser)
-set(__QT_DEPLOY_TARGET_Awax_browser_TYPE EXECUTABLE)
-set(__QT_DEPLOY_TARGET_test_url_FILE /Users/sherazrajput/Cpp-Projects/Awax_browser/build/test_url)
-set(__QT_DEPLOY_TARGET_test_url_TYPE EXECUTABLE)

@@ -1,7 +1,0 @@
-module Awax_browser
-typeinfo Awax_browser.qmltypes
-prefer :/qt/qml/Awax_browser/
-Main 1.0 qml/Main.qml
-SearchArea 1.0 qml/SearchArea/SearchArea.qml
-depends QtQuick
-

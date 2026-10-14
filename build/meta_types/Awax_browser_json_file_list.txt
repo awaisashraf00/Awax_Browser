@@ -1,2 +1,0 @@
-/Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser_autogen/include/../7IRV43PKB2/moc_URL.cpp.json
-/Users/sherazrajput/Cpp-Projects/Awax_browser/build/Awax_browser_autogen/include/../UFQQIFJZKK/moc_DnsResolver.cpp.json
