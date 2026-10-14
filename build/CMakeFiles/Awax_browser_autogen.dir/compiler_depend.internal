@@ -21,9 +21,11 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/_types/_nl_item.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/_xlocale.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/arm/_endian.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/arm/_param.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/arm/_types.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/arm/endian.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/arm/types.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/arpa/inet.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/assert.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__algorithm/all_of.h
@@ -248,6 +250,7 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/bit_reference.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/byte.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/complex.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/deque.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/fstream.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/functional.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/ios.h
@@ -257,8 +260,10 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/memory_resource.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/ostream.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/pair.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/queue.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/set.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/sstream.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/stack.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/streambuf.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/string.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/string_view.h
@@ -400,6 +405,8 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/transform_reduce.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__ostream/basic_ostream.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__ostream/put_character_sequence.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__random/is_valid.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__random/log2.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__random/uniform_int_distribution.h
@@ -430,6 +437,8 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__thread/support.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__thread/support/pthread.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__thread/this_thread.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__thread/thread.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__tree
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__tuple/find_index.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__tuple/ignore.h
@@ -478,6 +487,7 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__type_traits/is_base_of.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__type_traits/is_bounded_array.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__type_traits/is_callable.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__type_traits/is_class.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__type_traits/is_compound.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__type_traits/is_const.h
@@ -595,6 +605,8 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/array
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/atomic
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/bit
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/bitset
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/cassert
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/cctype
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/cerrno
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/chrono
@@ -613,14 +625,18 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/ctype.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/cwchar
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/cwctype
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/deque
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/errno.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/exception
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/execution
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/format
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/forward_list
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/functional
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/future
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/initializer_list
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/ios
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/iosfwd
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/istream
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/iterator
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/limits
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/list
@@ -632,7 +648,13 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/new
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/numeric
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/optional
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/ostream
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/print
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/queue
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/ratio
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/set
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/sstream
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/stack
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/stdbool.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/stddef.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/stdexcept
@@ -644,10 +666,12 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/string.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/string_view
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/system_error
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/thread
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/tuple
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/type_traits
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/typeinfo
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/unordered_map
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/unordered_set
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/utility
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/variant
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/vector
@@ -658,9 +682,14 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/libkern/arm/_OSByteOrder.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/locale.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/machine/_endian.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/machine/_param.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/machine/_types.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/machine/endian.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/machine/types.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/net/net_kev.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/netdb.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/netinet/in.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/netinet6/in6.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/nl_types.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/pthread/pthread.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/pthread/pthread_impl.h
@@ -708,6 +737,7 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_int64_t.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_int8_t.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_intptr_t.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_iovec_t.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_key_t.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_mach_port_t.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_mbstate_t.h
@@ -717,8 +747,10 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_off_t.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_pid_t.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_rsize_t.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_sa_family_t.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_sigset_t.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_size_t.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_socklen_t.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_ssize_t.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_suseconds_t.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_time_t.h
@@ -735,7 +767,9 @@
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/_types/_useconds_t.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/appleapiopts.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/cdefs.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/constrained_ctypes.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/qos.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/socket.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/sys/types.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/time.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/xlocale.h
@@ -763,20 +797,22 @@
  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/HttpClient.h
  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Server.cpp
  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Server.h
- /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Socket.cpp
- /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Socket.h
  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.cpp
  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/QObject
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/QString
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/QThread
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/QtDebug
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/QtTypes
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/q17memory.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/q20bit.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/q20functional.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/q20iterator.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/q20memory.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/q23type_traits.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qalloc.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qanystringview.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qarraydata.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qarraydataops.h
@@ -800,8 +836,11 @@
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qcontainerfwd.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qcontainerinfo.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qcontainertools_impl.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qcontiguouscache.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qdatastream.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qdeadlinetimer.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qdebug.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qflags.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qfloat16.h
@@ -811,7 +850,9 @@
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qgenericatomic.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qglobal.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qglobalstatic.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qhash.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qhashfunctions.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qiodevice.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qiodevicebase.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qiterable.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qiterator.h
@@ -819,6 +860,7 @@
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qlist.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qlogging.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qmalloc.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qmap.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qmath.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qmetacontainer.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qmetatype.h
@@ -835,6 +877,12 @@
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qrefcount.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qscopedpointer.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qscopeguard.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qset.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qshareddata.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qshareddata_impl.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qsharedpointer.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qsharedpointer_impl.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qspan.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qstdlibdetection.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qstring.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qstringalgorithms.h
@@ -859,7 +907,9 @@
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qtdeprecationdefinitions.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qtdeprecationmarkers.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qtextstream.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qtformat_impl.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qthread.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qtnoop.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qtpreprocessorsupport.h
@@ -871,9 +921,16 @@
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qtypeinfo.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qtypes.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h
  /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtNetwork.framework/Versions/A/Headers/QHostAddress
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtNetwork.framework/Versions/A/Headers/qabstractsocket.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtNetwork.framework/Versions/A/Headers/qhostaddress.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtNetwork.framework/Versions/A/Headers/qtnetwork-config.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkexports.h
+ /opt/homebrew/Cellar/qtbase/6.11.1/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkglobal.h
  /opt/homebrew/bin/cmake
  /opt/homebrew/lib/cmake/Qt6/FindWrapAtomic.cmake
  /opt/homebrew/lib/cmake/Qt6/FindWrapOpenGL.cmake

@@ -935,7 +935,67 @@ CMakeFiles/Awax_browser.dir/Awax_browser_autogen/mocs_compilation.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QThread \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qthread.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdeadlinetimer.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/future \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/thread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/put_character_sequence.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/format \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/deque.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/queue.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/deque \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stack \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/stack.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/thread \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/this_thread.h \
+  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/QHostAddress \
+  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/qhostaddress.h \
+  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
+  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qshareddata.h \
+  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qiodevice.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qspan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20iterator.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QtDebug \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdebug.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtextstream.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcontiguouscache.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsharedpointer.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/set \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmap.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qshareddata_impl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qset.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qhash.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvarlengtharray.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qalloc.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arpa/inet.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netinet/in.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/socket.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/constrained_ctypes.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_param.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_param.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/net/net_kev.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sa_family_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_socklen_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_iovec_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netinet6/in6.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netdb.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtmochelpers.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtmocconstants.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20algorithm.h \

@@ -1,9 +1,11 @@
 #pragma once
 
 #include <QObject>
+#include <QThread>
 #include <QHostAddress>
 #include <atomic>
 #include <thread>
+#include <netinet/in.h>
 
 class TcpConnection : public QObject
 {
@@ -29,4 +31,5 @@ private:
     std::mutex mtx_lock;
     std::thread m_worker;               
     std::atomic<bool> m_running{false}; 
+    struct sockaddr_in addr;
 };

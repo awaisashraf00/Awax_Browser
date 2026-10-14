@@ -37,8 +37,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Awax_browser.dir/src/network/HttpClient.cpp.o.d"
   "CMakeFiles/Awax_browser.dir/src/network/Server.cpp.o"
   "CMakeFiles/Awax_browser.dir/src/network/Server.cpp.o.d"
-  "CMakeFiles/Awax_browser.dir/src/network/Socket.cpp.o"
-  "CMakeFiles/Awax_browser.dir/src/network/Socket.cpp.o.d"
   "CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o"
   "CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o.d"
   "awax_browser_qmltyperegistrations.cpp"

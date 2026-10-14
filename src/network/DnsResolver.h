@@ -1,8 +1,14 @@
 #pragma once
 
 #include <QObject>
+#include <QThread>
 #include <QHostAddress>
 #include <QString>
+#include <QtDebug>
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <sys/socket.h>
+
 class DnsResolver : public QObject
 {
     Q_OBJECT
@@ -13,7 +19,7 @@ public:
 
 signals:
     
-    void resolved(int port_num,const QHostAddress &address);
+    void resolved(const QHostAddress &address);
     // void failed(const QString &host, const QString &reason);
 
 private:

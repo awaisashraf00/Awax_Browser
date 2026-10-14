@@ -934,18 +934,17 @@ CMakeFiles/Awax_browser.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QString \
-  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/browser/Browser.h \
-  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QtTypes \
-  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Server.h \
-  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Socket.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QThread \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qthread.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdeadlinetimer.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/future \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/thread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/put_character_sequence.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/format \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue \
@@ -956,12 +955,34 @@ CMakeFiles/Awax_browser.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/stack.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/unistd.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_posix_vdisable.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/select.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_select.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uuid_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/thread \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/this_thread.h \
+  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/QHostAddress \
+  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/qhostaddress.h \
+  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
+  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qshareddata.h \
+  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qiodevice.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qspan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20iterator.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QtDebug \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdebug.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtextstream.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcontiguouscache.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsharedpointer.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/set \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmap.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qshareddata_impl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qset.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qhash.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvarlengtharray.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qalloc.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arpa/inet.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netinet/in.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/socket.h \
@@ -973,26 +994,14 @@ CMakeFiles/Awax_browser.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_socklen_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_iovec_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netinet6/in6.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/thread \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/this_thread.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/thread.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/netdb.h \
+  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/browser/Browser.h \
+  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QtTypes \
+  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Server.h \
   /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/ProtocolPorts.h \
+  /Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/TcpConnection.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QDebug \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdebug.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtextstream.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcontiguouscache.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsharedpointer.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qshareddata.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/set \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmap.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qshareddata_impl.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qset.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qhash.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvarlengtharray.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qalloc.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QGuiApplication \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qguiapplication.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtguiglobal.h \
@@ -1003,7 +1012,6 @@ CMakeFiles/Awax_browser.dir/src/main.cpp.o: \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbasictimer.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qeventloop.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdeadlinetimer.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qnativeinterface.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qwindowdefs.h \
@@ -1028,9 +1036,6 @@ CMakeFiles/Awax_browser.dir/src/main.cpp.o: \
   /opt/homebrew/opt/qt/lib/QtQml.framework/Headers/qjsvalue.h \
   /opt/homebrew/opt/qt/lib/QtQml.framework/Headers/qtqmlglobal.h \
   /opt/homebrew/opt/qt/lib/QtQml.framework/Headers/qtqml-config.h \
-  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
-  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
-  /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
   /opt/homebrew/opt/qt/lib/QtQml.framework/Headers/qtqmlexports.h \
   /opt/homebrew/opt/qt/lib/QtQml.framework/Headers/qjsmanagedvalue.h \
   /opt/homebrew/opt/qt/lib/QtQml.framework/Headers/qjsprimitivevalue.h \
@@ -1047,9 +1052,6 @@ CMakeFiles/Awax_browser.dir/src/main.cpp.o: \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpointer.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtyperevision.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qversionnumber.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qspan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20iterator.h \
   /opt/homebrew/opt/qt/lib/QtQml.framework/Headers/qqmlregistration.h \
   /opt/homebrew/opt/qt/include/QtQmlIntegration/qqmlintegration.h \
   /opt/homebrew/opt/qt/lib/QtQml.framework/Headers/qqmlerror.h \

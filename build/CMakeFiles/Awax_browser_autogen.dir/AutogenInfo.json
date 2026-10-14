@@ -1623,12 +1623,6 @@
 			null
 		],
 		[
-			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Socket.h",
-			"MU",
-			"UFQQIFJZKK/moc_Socket.cpp",
-			null
-		],
-		[
 			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.h",
 			"MU",
 			"7IRV43PKB2/moc_URL.cpp",
@@ -1752,11 +1746,6 @@
 		],
 		[
 			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Server.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Socket.cpp",
 			"MU",
 			null
 		],

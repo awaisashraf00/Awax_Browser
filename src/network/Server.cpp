@@ -2,7 +2,6 @@
 
 REQUEST_SERVER::REQUEST_SERVER(bool HTTP_PROTOCOL)
 {
-    QObject::connect()
 }
 
 

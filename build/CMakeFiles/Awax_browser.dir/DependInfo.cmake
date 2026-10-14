@@ -21,7 +21,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/DnsResolver.cpp" "CMakeFiles/Awax_browser.dir/src/network/DnsResolver.cpp.o" "gcc" "CMakeFiles/Awax_browser.dir/src/network/DnsResolver.cpp.o.d"
   "/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/HttpClient.cpp" "CMakeFiles/Awax_browser.dir/src/network/HttpClient.cpp.o" "gcc" "CMakeFiles/Awax_browser.dir/src/network/HttpClient.cpp.o.d"
   "/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Server.cpp" "CMakeFiles/Awax_browser.dir/src/network/Server.cpp.o" "gcc" "CMakeFiles/Awax_browser.dir/src/network/Server.cpp.o.d"
-  "/Users/sherazrajput/Cpp-Projects/Awax_browser/src/network/Socket.cpp" "CMakeFiles/Awax_browser.dir/src/network/Socket.cpp.o" "gcc" "CMakeFiles/Awax_browser.dir/src/network/Socket.cpp.o.d"
   "/Users/sherazrajput/Cpp-Projects/Awax_browser/src/url/URL.cpp" "CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o" "gcc" "CMakeFiles/Awax_browser.dir/src/url/URL.cpp.o.d"
   )
 

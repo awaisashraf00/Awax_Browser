@@ -620,30 +620,6 @@ src/network/Server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/Server.cpp.s
 .PHONY : src/network/Server.cpp.s
 
-src/network/Socket.o: src/network/Socket.cpp.o
-.PHONY : src/network/Socket.o
-
-# target to build an object file
-src/network/Socket.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/Socket.cpp.o
-.PHONY : src/network/Socket.cpp.o
-
-src/network/Socket.i: src/network/Socket.cpp.i
-.PHONY : src/network/Socket.i
-
-# target to preprocess a source file
-src/network/Socket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/Socket.cpp.i
-.PHONY : src/network/Socket.cpp.i
-
-src/network/Socket.s: src/network/Socket.cpp.s
-.PHONY : src/network/Socket.s
-
-# target to generate assembly for a file
-src/network/Socket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Awax_browser.dir/build.make CMakeFiles/Awax_browser.dir/src/network/Socket.cpp.s
-.PHONY : src/network/Socket.cpp.s
-
 src/url/URL.o: src/url/URL.cpp.o
 .PHONY : src/url/URL.o
 
@@ -781,9 +757,6 @@ help:
 	@echo "... src/network/Server.o"
 	@echo "... src/network/Server.i"
 	@echo "... src/network/Server.s"
-	@echo "... src/network/Socket.o"
-	@echo "... src/network/Socket.i"
-	@echo "... src/network/Socket.s"
 	@echo "... src/url/URL.o"
 	@echo "... src/url/URL.i"
 	@echo "... src/url/URL.s"

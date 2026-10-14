@@ -69,9 +69,24 @@
         "classes": [
             {
                 "className": "DnsResolver",
-                "lineNumber": 5,
+                "lineNumber": 12,
                 "object": true,
                 "qualifiedClassName": "DnsResolver",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "address",
+                                "type": "QHostAddress"
+                            }
+                        ],
+                        "index": 0,
+                        "lineNumber": 22,
+                        "name": "resolved",
+                        "returnType": "void"
+                    }
+                ],
                 "superClasses": [
                     {
                         "access": "public",

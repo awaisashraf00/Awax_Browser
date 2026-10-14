@@ -1,8 +1,4 @@
 #include "DnsResolver.h"
-#include <QtDebug>
-#include <arpa/inet.h>
-#include <netdb.h>
-#include <sys/socket.h>
 
 DnsResolver::DnsResolver(QObject *parent)
     : QObject(parent)
@@ -16,6 +12,8 @@ void DnsResolver::resolve(const QString &host)
     addrinfo hints{0};
     hints.ai_family = AF_INET;
     hints.ai_socktype = SOCK_STREAM;
+
+    
 
     addrinfo *results = nullptr;
     const int response = ::getaddrinfo(m_host.toUtf8().constData(), nullptr, &hints, &results);

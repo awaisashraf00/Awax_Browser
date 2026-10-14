@@ -10,10 +10,12 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
+    
+    QThread::currentThread()->setObjectName("MAIN THREAD");
 
     BROWSER Browser;
     Browser.RUN();
-
+    
     engine.rootContext()->setContextProperty("Main_Url", &Browser.Give_Url_address());
     engine.loadFromModule("Awax_browser", "Main");  
     
