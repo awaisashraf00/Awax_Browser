@@ -1,6 +1,6 @@
-DataBase.db
+
 build/
-graphify-out
+graphify-out/
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
@@ -19,7 +19,7 @@ AGENTS.md
 *~
 .vscode/
 .idea/
-
+.opencode
 # Generated binaries
 *.exe
 *.out

@@ -1,6 +1,6 @@
 #pragma once
+#include <TcpConnection.h>
 #include <URL.h>
-#include <Server.h>
 #include <QThread>
 #include <DnsResolver.h>
 #include <QObject>
@@ -14,6 +14,7 @@ class BROWSER{
         // an event loop. Jobs are handed to it by queuing signals into
         // that loop; the thread wakes up and executes them one by one.
         QThread m_dns_thread;
+        QThread m_Tcp_thread;
 
         // DNS worker object. Heap-allocated with NO parent on purpose:
         // a QObject that has a parent cannot be moved to another thread,
@@ -21,7 +22,7 @@ class BROWSER{
         // Deleted automatically (deleteLater) when the thread finishes.
         DnsResolver *dns = nullptr;
 
-        TcpConnection open_connection;
+        TcpConnection *open_connection = nullptr;
         uint16_t m_port_num{0};
 
     public:

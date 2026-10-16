@@ -19,7 +19,7 @@ TcpConnection::~TcpConnection()
 void TcpConnection::connectToHost(const QHostAddress &ip, quint16 port)
 {
     if (m_running) {
-        return;  `
+        return;  
     }
 
     m_worker = std::thread([this, ip, port]() {
@@ -41,21 +41,25 @@ void TcpConnection::connectToHost(const QHostAddress &ip, quint16 port)
                       &addr.sin_addr) != 1) {
 
             emit Is_failed(QString("invalid IPv4 address: %1").arg(ip.toString()));
-            ::close(fd);
+            qDebug()<<QString("invalid IPv4 address: %1").arg(ip.toString()));
             m_running = false;
+            ::close(fd);
             return;
         }
-
-        if(::connect(m_fd,reinterpret_cast<const sockaddr*>(&addr),sizeof(addr))
+        
+        if(::connect(fd,reinterpret_cast<const sockaddr*>(&addr),sizeof(addr))
         {
+
+            emit Is_failed(QString("Connection failed with address: %1").arg(ip.toString()));
+            qDebug()<<QString("Connection failed with address: %1").arg(ip.toString()))
+            m_running = false;
+            ::close(fd);
+            return;
+            
+        }else{
+            emit Is_failed(QString("Connection ssucceded with address: %1").arg(ip.toString()));
+            qDebug()<<"Connection ssucceded with address: %1";
         }
 
-        // ---- 4. Exchange bytes --------------------------------------
-        // (Phase 4) ::send() writes request bytes; ::recv() reads the
-        // response into a buffer. NOTE for later: recv returning 0
-        // means the server closed the connection (EOF); -1 means
-        // error; otherwise the return value is how many bytes you
-        // got -- it can be FEWER than you asked for, so callers must
-        // loop and accumulate. A TCP stream has no "messages".
     });
 }

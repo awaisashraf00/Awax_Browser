@@ -20,8 +20,8 @@ qt_add_executable(Awax_browser
     src/network/HttpClient.cpp
     src/network/DnsResolver.h
     src/network/DnsResolver.cpp 
-    src/network/Server.h
-    src/network/Server.cpp
+    src/network/TcpConnection.h
+    src/network/TcpConnection.cpp 
     src/browser/Browser.cpp
     src/browser/Browser.h
 )

@@ -27,7 +27,8 @@ signals:
     void Is_closed();
 
 private:
-    int m_fd = -1; 
+    
+    const int  fd = -1; 
     std::mutex mtx_lock;
     std::thread m_worker;               
     std::atomic<bool> m_running{false}; 
