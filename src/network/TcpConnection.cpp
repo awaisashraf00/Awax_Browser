@@ -12,54 +12,40 @@ TcpConnection::TcpConnection(QObject *parent)
 {
 }
 
-TcpConnection::~TcpConnection()
-{
-}
+TcpConnection::~TcpConnection(){}
 
 void TcpConnection::connectToHost(const QHostAddress &ip, quint16 port)
 {
-    if (m_running) {
-        return;  
+
+    fd  = {::socket(AF_INET, SOCK_STREAM, 0)};
+    if (fd < 0) {
+
+        emit Is_failed(QString("socket: %1").arg(strerror(errno)));
+        return;
     }
 
-    m_worker = std::thread([this, ip, port]() {
-        m_running = true;
+    sockaddr_in addr{};
+    addr.sin_family = AF_INET;
+    addr.sin_port = htons(port);
+    
+    if (inet_pton(AF_INET, ip.toString().toUtf8().constData(),
+                    &addr.sin_addr) != 1) 
+    {
+        emit Is_failed(QString("invalid IPv4 address: %1").arg(ip.toString()));
+        qDebug()<<QString("invalid IPv4 address: %1").arg(ip.toString());
+        ::close(fd);
+        return;
+    }
+    
+    if (::connect(fd, reinterpret_cast<const sockaddr*>(&addr), sizeof(addr)) < 0) {
 
-        const int fd = ::socket(AF_INET, SOCK_STREAM, 0);
-        if (fd < 0) {
-
-            emit Is_failed(QString("socket: %1").arg(strerror(errno)));
-            m_running = false;
-            return;
-        }
-
-        sockaddr_in addr{};
-        addr.sin_family = AF_INET;
-        addr.sin_port = htons(port);
+        emit Is_failed(QString("Connection failed with address: %1").arg(ip.toString()));
+        qDebug() << QString("Connection failed with address: %1").arg(ip.toString());
+        ::close(fd);
+        return;
         
-        if (inet_pton(AF_INET, ip.toString().toUtf8().constData(),
-                      &addr.sin_addr) != 1) {
+    }else{
+        qDebug() << QString("Connection succeeded with address: %1").arg(ip.toString());
+    }
 
-            emit Is_failed(QString("invalid IPv4 address: %1").arg(ip.toString()));
-            qDebug()<<QString("invalid IPv4 address: %1").arg(ip.toString()));
-            m_running = false;
-            ::close(fd);
-            return;
-        }
-        
-        if(::connect(fd,reinterpret_cast<const sockaddr*>(&addr),sizeof(addr))
-        {
-
-            emit Is_failed(QString("Connection failed with address: %1").arg(ip.toString()));
-            qDebug()<<QString("Connection failed with address: %1").arg(ip.toString()))
-            m_running = false;
-            ::close(fd);
-            return;
-            
-        }else{
-            emit Is_failed(QString("Connection ssucceded with address: %1").arg(ip.toString()));
-            qDebug()<<"Connection ssucceded with address: %1";
-        }
-
-    });
 }

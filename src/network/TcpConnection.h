@@ -28,9 +28,9 @@ signals:
 
 private:
     
-    const int  fd = -1; 
-    std::mutex mtx_lock;
-    std::thread m_worker;               
-    std::atomic<bool> m_running{false}; 
+    int  fd; 
+    // std::mutex mtx_lock;
+    // std::thread m_worker;               
+    // std::atomic<bool> m_running{false}; 
     struct sockaddr_in addr;
 };

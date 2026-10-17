@@ -28,8 +28,8 @@ BROWSER::BROWSER()
     });
 
     QObject::connect(dns, &DnsResolver::resolved,
-                     open_connection, [srv = open_connection,pp = m_port_num](const QHostAddress &address_of_server) {
-        srv->connectToHost(address_of_server, pp);
+                     open_connection, [this](const QHostAddress &address_of_server) {
+        open_connection->connectToHost(address_of_server, m_port_num);
     });
 }
 BROWSER::~BROWSER()
