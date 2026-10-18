@@ -1,11 +1,8 @@
 #pragma once
-
 #include <QObject>
-#include <QThread>
 #include <QHostAddress>
-#include <atomic>
-#include <thread>
-#include <netinet/in.h>
+#include <QString>
+#include <HttpClient.h>
 
 class TcpConnection : public QObject
 {
@@ -13,13 +10,16 @@ class TcpConnection : public QObject
 
 public:
     explicit TcpConnection(QObject *parent = nullptr);
-
-    
     ~TcpConnection() override;
 
 public slots:
 
-    void connectToHost(const QHostAddress &ip, quint16 port);
+    void connectToHost(const QHostAddress &ip,
+         quint16 port,
+         QString host,
+         QString scheme,
+         QString path,
+         QString query);
 
 signals:
     void connected();
@@ -27,10 +27,9 @@ signals:
     void Is_closed();
 
 private:
-    
-    int  fd; 
+    HttpClient httpClient;
+    int fd{-1};
     // std::mutex mtx_lock;
     // std::thread m_worker;               
     // std::atomic<bool> m_running{false}; 
-    struct sockaddr_in addr;
 };

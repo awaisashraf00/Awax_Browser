@@ -69,3 +69,12 @@ add_executable(test_url
 target_include_directories(test_url PRIVATE src/url src/network)
 target_link_libraries(test_url PRIVATE Qt6::Core)
 add_test(NAME url COMMAND test_url)
+
+add_executable(test_http_client
+    tests/test_http_client.cpp
+    src/network/HttpClient.cpp
+    src/network/HttpClient.h
+)
+target_include_directories(test_http_client PRIVATE src/network)
+target_link_libraries(test_http_client PRIVATE Qt6::Core)
+add_test(NAME http_client COMMAND test_http_client)

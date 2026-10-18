@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
     QThread::currentThread()->setObjectName("MAIN THREAD");
 
     BROWSER Browser;
-    Browser.RUN();
     
     engine.rootContext()->setContextProperty("Main_Url", &Browser.Give_Url_address());
     engine.loadFromModule("Awax_browser", "Main");  

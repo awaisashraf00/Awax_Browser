@@ -18,8 +18,8 @@ BROWSER::BROWSER()
     m_Tcp_thread.start();
 
     QObject::connect(&url, &URL::navigationRequested,
-                     open_connection, [p = &m_port_num](const ParsedUrl &parsed) {
-        *p = parsed.port;
+                     open_connection, [pp = &m_parsed_Browser](const ParsedUrl &parsed) {
+        *pp = parsed;
     });
     
     QObject::connect(&url, &URL::navigationRequested,
@@ -29,7 +29,12 @@ BROWSER::BROWSER()
 
     QObject::connect(dns, &DnsResolver::resolved,
                      open_connection, [this](const QHostAddress &address_of_server) {
-        open_connection->connectToHost(address_of_server, m_port_num);
+        open_connection->connectToHost(address_of_server,
+             m_parsed_Browser.port,
+            m_parsed_Browser.host,
+            m_parsed_Browser.scheme,
+            m_parsed_Browser.path,
+            m_parsed_Browser.query);
     });
 }
 BROWSER::~BROWSER()
@@ -38,7 +43,4 @@ BROWSER::~BROWSER()
     m_dns_thread.wait();
     m_Tcp_thread.quit();
     m_Tcp_thread.wait();
-}
-void BROWSER::RUN()
-{
 }
