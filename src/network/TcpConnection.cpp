@@ -1,16 +1,10 @@
 #include "TcpConnection.h"
 
-#include <QDebug>
-#include <arpa/inet.h>
-#include <cerrno>
-#include <cstring>
-#include <netinet/in.h>
-#include <sys/socket.h>
-#include <unistd.h>
-
 TcpConnection::TcpConnection(QObject *parent)
     : QObject(parent)
 {
+        
+    QThread::currentThread()->setObjectName("TCP THREAD");
 }
 
 // Releases the socket descriptor owned by this connection worker, if one was
@@ -31,12 +25,13 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
                                   QString path,
                                   QString query)
 {
+    // port = 8000;
     if (fd >= 0) {
         ::close(fd);
         fd = -1;
     }
 
-    if (scheme != QStringLiteral("http")) {
+    if (scheme != QStringLiteral("http") && scheme != QStringLiteral("https")) {
         emit Is_failed(QStringLiteral("HTTPS requires TLS, which is not implemented yet"));
         return;
     }
@@ -77,14 +72,18 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
         fd = -1;
         return;
     }
-
+    qDebug()<< " Connected to --->" << host;
+    
     emit connected();
-
+    
     QString errorMessage;
     if (!httpClient.sendRequest(fd, host, port, path, query, errorMessage)) {
         emit Is_failed(errorMessage);
+        qDebug()<< errorMessage;
         ::close(fd);
         fd = -1;
+    }else{
+        qDebug()<< " request sent to --->" << host;
     }
 
 }

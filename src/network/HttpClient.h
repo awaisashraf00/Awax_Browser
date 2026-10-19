@@ -1,5 +1,9 @@
 #pragma once
-
+#include "ProtocolPorts.h"
+#include <cerrno>
+#include <cstring>
+#include <sys/socket.h>
+#include <QDebug>
 #include <QByteArray>
 #include <QString>
 #include <QtGlobal>

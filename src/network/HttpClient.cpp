@@ -1,11 +1,5 @@
 #include "HttpClient.h"
 
-#include "ProtocolPorts.h"
-
-#include <cerrno>
-#include <cstring>
-#include <sys/socket.h>
-
 // Builds the HTTP request line and required Host header from parsed URL
 // components; the fragment is intentionally absent because it is client-side.
 QByteArray HttpClient::buildRequest(const QString &host,
@@ -29,8 +23,7 @@ QByteArray HttpClient::buildRequest(const QString &host,
     return request;
 }
 
-// Sends all serialized request bytes, retrying interrupted calls and handling
-// partial writes because POSIX send() is allowed to accept only part of a buffer.
+
 bool HttpClient::sendRequest(int socketFd,
                              const QString &host,
                              quint16 port,
@@ -48,30 +41,52 @@ bool HttpClient::sendRequest(int socketFd,
         errorMessage = QStringLiteral("HTTP request components contain a line break");
         return false;
     }
-
+    // port = 8000;
     const QByteArray request = buildRequest(host, port, path, query);
+    
     qsizetype bytesSent = 0;
     while (bytesSent < request.size()) {
-        // ssize_t is the POSIX signed byte count returned by send(); its
-        // signedness lets us distinguish an error (-1) from zero bytes sent.
         const ssize_t result = ::send(socketFd,
-                                      request.constData() + bytesSent,
-                                      static_cast<size_t>(request.size() - bytesSent),
-                                      0);
-        if (result < 0) {
+            request.constData() + bytesSent,
+            static_cast<size_t>(request.size() - bytesSent),
+            0);
+            if (result < 0) {
+                if (errno == EINTR) {
+                    continue;
+                }
+                errorMessage = QStringLiteral("send: %1")
+                .arg(QString::fromLocal8Bit(std::strerror(errno)));
+                return false;
+            }
+            if (result == 0) {
+                errorMessage = QStringLiteral("send: connection closed before request was written");
+                return false;
+            }
+            bytesSent += result;
+    }
+    QByteArray responseBuffer;
+    responseBuffer.resize(4096); // Make space for recv() to write into.
+
+    qsizetype bytesRecieved{0};
+    
+    while (true) {
+        const ssize_t bytesReceived = ::recv(
+                socketFd,
+                responseBuffer.data(),   
+                static_cast<size_t>(responseBuffer.size()),
+                0);
+        if (bytesReceived < 0) {
             if (errno == EINTR) {
                 continue;
             }
-            errorMessage = QStringLiteral("send: %1")
-                               .arg(QString::fromLocal8Bit(std::strerror(errno)));
+            errorMessage = QStringLiteral("recieve: %1")
+            .arg(QString::fromLocal8Bit(std::strerror(errno)));
             return false;
         }
-        if (result == 0) {
-            errorMessage = QStringLiteral("send: connection closed before request was written");
-            return false;
+        if (bytesReceived == 0) {
+            break;
         }
-        bytesSent += result;
+        qDebug() << QByteArray(responseBuffer.constData(), bytesReceived);   
     }
-
     return true;
 }

@@ -3,6 +3,7 @@
 DnsResolver::DnsResolver(QObject *parent)
     : QObject(parent)
 {
+    QThread::currentThread()->setObjectName("DNS THREAD");
 }
 
 void DnsResolver::resolve(const QString &host)
