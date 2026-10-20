@@ -33,9 +33,15 @@ public slots:
 
 signals:
     void connected();
+
+    // Carries the fully received and parsed HTTP response up to the
+    // browser layer. This signal crosses a thread boundary (this object
+    // lives on the TCP worker thread), and queued connections copy their
+    // arguments into an event - which is why HttpResponse must be known
+    // to Qt's meta-type system (see Q_DECLARE_METATYPE in HttpResponse.h).
+    void responseReceived(const HttpResponse &response);
     void Is_failed(const QString &reason);
     void Is_closed();
-    void Response_Resceived(const QString &res);
 
 private:
     HttpClient httpClient;

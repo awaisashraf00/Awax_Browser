@@ -78,6 +78,10 @@ add_executable(test_http_client
     tests/test_http_client.cpp
     src/network/HttpClient.cpp
     src/network/HttpClient.h
+    src/network/HttpResponseParser.cpp
+    src/network/HttpResponseParser.h
+    src/network/HttpResponse.cpp
+    src/network/HttpResponse.h
 )
 target_include_directories(test_http_client PRIVATE src/network)
 target_link_libraries(test_http_client PRIVATE Qt6::Core)

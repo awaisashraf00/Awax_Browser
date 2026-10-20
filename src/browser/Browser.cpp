@@ -1,4 +1,10 @@
 #include "Browser.h"
+#include <QDebug>
+
+namespace {
+constexpr unsigned int MAX_REDIRECTS = 10;
+}
+
 BROWSER::BROWSER()
 {
 
@@ -21,6 +27,13 @@ BROWSER::BROWSER()
                      open_connection, [pp = &m_parsed_Browser](const ParsedUrl &parsed) {
         *pp = parsed;
     });
+
+    QObject::connect(&url, &URL::navigationRequested,
+                     &url, [this](const ParsedUrl &) {
+        if (!m_redirectNavigation) {
+            m_redirectCount = 0;
+        }
+    });
     
     QObject::connect(&url, &URL::navigationRequested,
                      dns, [srv = dns](const ParsedUrl &parsed) {
@@ -36,7 +49,51 @@ BROWSER::BROWSER()
             m_parsed_Browser.path,
             m_parsed_Browser.query);
     });
+
+    QObject::connect(open_connection, &TcpConnection::responseReceived,
+                     &url, [this](const HttpResponse &response) {
+        handleResponse(response);
+    });
 }
+
+// Follows redirects by resolving Location against the current URL and
+// restarting navigation, which naturally performs DNS and opens a new socket.
+void BROWSER::handleResponse(const HttpResponse &response)
+{
+    if (!response.isRedirect()) {
+        m_redirectCount = 0;
+        return;
+    }
+
+    const std::optional<QString> location =
+        response.headerValue(QStringLiteral("Location"));
+    if (!location.has_value() || location->isEmpty()) {
+        qWarning() << "HTTP redirect response is missing a Location header";
+        m_redirectCount = 0;
+        return;
+    }
+
+    if (m_redirectCount >= MAX_REDIRECTS) {
+        qWarning() << "HTTP redirect limit exceeded";
+        m_redirectCount = 0;
+        return;
+    }
+
+    QString errorMessage;
+    const std::optional<QString> destination =
+        url.resolveReference(*location, errorMessage);
+    if (!destination.has_value()) {
+        qWarning() << "Cannot follow HTTP redirect:" << errorMessage;
+        m_redirectCount = 0;
+        return;
+    }
+
+    ++m_redirectCount;
+    m_redirectNavigation = true;
+    url.url_write(*destination);
+    m_redirectNavigation = false;
+}
+
 BROWSER::~BROWSER()
 {
     m_dns_thread.quit();

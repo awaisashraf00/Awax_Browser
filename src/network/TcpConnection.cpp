@@ -14,7 +14,6 @@ TcpConnection::~TcpConnection()
     }
 }
 
-
 void TcpConnection::connectToHost(const QHostAddress &ip,
                                   quint16 port,
                                   QString host,
@@ -23,15 +22,20 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
                                   QString query)
 {
     // port = 8000;
+
     if (fd >= 0) {
         ::close(fd);
         fd = -1;
     }
 
-    if (scheme != QStringLiteral("http") && scheme != QStringLiteral("https")) {
-        emit Is_failed(QStringLiteral("HTTPS requires TLS, which is not implemented yet"));
-        return;
-    }
+    // if (scheme == QStringLiteral("https")) {
+    //     emit Is_failed(QStringLiteral("HTTPS requires TLS, which is not implemented yet"));
+    //     return;
+    // }
+    // if (scheme != QStringLiteral("http")) {
+    //     emit Is_failed(QStringLiteral("unsupported URL scheme"));
+    //     return;
+    // }
 
     fd = ::socket(AF_INET, SOCK_STREAM, 0);
     if (fd < 0) {
@@ -74,19 +78,25 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
     emit connected();
     
     QString errorMessage;
-    QString Server_Received_Response;
+    HttpResponse response;
 
-    if (!httpClient.sendRequest(fd, host, port, path, query, errorMessage, Server_Received_Response)) {
+    if (!httpClient.sendRequest(fd, host, port, path, query, errorMessage, response)) {
         emit Is_failed(errorMessage);
         qDebug()<< errorMessage;
         ::close(fd);
         fd = -1;
-    }else{
-        qDebug()<< " request sent to --->" << host;
-        qDebug()<< "  <-------->";
-        emit Response_Resceived(Server_Received_Response);
-        qDebug()<< Server_Received_Response ;
-        qDebug()<< "  <-------->";
+        return;
     }
 
+    qDebug()<< " request sent to --->" << host;
+    qDebug()<< "  <----   RESPOMSE     ---->";
+    qDebug()<< "  <-------->";
+    qDebug()<< response.body;
+    qDebug()<< "  <-------->";
+
+    emit responseReceived(response);
+
+    ::close(fd);
+    fd = -1;
+    emit Is_closed();
 }

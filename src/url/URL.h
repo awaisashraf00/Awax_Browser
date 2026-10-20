@@ -3,6 +3,7 @@
 #include <QObject>
 #include <QString>
 #include <QtTypes>
+#include <optional>
 #include<ProtocolPorts.h>
 
 
@@ -28,6 +29,10 @@ public:
     const ParsedUrl &parsed() const { return m_parsed; }
 
     bool parse(const QString &raw);
+    // Resolves an HTTP Location reference against the current page URL, then
+    // validates the absolute destination with this browser's supported schemes.
+    std::optional<QString> resolveReference(const QString &reference,
+                                            QString &errorMessage) const;
     void url_write(const QString &new_url);
 
 signals:

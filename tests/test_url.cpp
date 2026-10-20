@@ -43,6 +43,24 @@ int main()
     CHECK(url.parsed().query == "x=1");
     CHECK(url.parsed().fragment == "top");
 
+    // Redirect references are resolved against the current page before the
+    // result enters the normal URL parsing and DNS navigation pipeline.
+    QString redirectError;
+    url.url_write(QStringLiteral("https://example.com/dir/page?old=1"));
+    const std::optional<QString> absoluteRedirect =
+        url.resolveReference(QStringLiteral("https://other.example/new"), redirectError);
+    CHECK(absoluteRedirect == QStringLiteral("https://other.example/new"));
+    const std::optional<QString> rootRelativeRedirect =
+        url.resolveReference(QStringLiteral("/login"), redirectError);
+    CHECK(rootRelativeRedirect == QStringLiteral("https://example.com/login"));
+    const std::optional<QString> pathRelativeRedirect =
+        url.resolveReference(QStringLiteral("../next"), redirectError);
+    CHECK(pathRelativeRedirect == QStringLiteral("https://example.com/next"));
+    const std::optional<QString> unsupportedRedirect =
+        url.resolveReference(QStringLiteral("ftp://example.com/file"), redirectError);
+    CHECK(!unsupportedRedirect.has_value());
+    CHECK(!redirectError.isEmpty());
+
     // Plain http gets the default port 80.
     checkParsed(url, "http://example.com", "http", "example.com", 80, "/");
 

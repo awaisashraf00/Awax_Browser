@@ -39,6 +39,12 @@ int main()
         std::printf("308 was not recognized as a redirect.\n");
         return 1;
     }
+    HttpResponse seeOther;
+    seeOther.statusCode = 303;
+    if (!seeOther.isRedirect()) {
+        std::printf("303 was not recognized as a redirect.\n");
+        return 1;
+    }
     if (redirect->headers.size() != 4) {
         std::printf("Expected 4 headers, got %lld\n",
                     static_cast<long long>(redirect->headers.size()));
@@ -88,7 +94,7 @@ int main()
     const std::optional<HttpResponse> bare =
         parser.parse(QByteArray("HTTP/1.1 204\r\n\r\n"), errorMessage);
     if (!bare.has_value() || bare->statusCode != 204 ||
-        !bare->reasonPhrase.isEmpty() || bare->body.isEmpty()) {
+        !bare->reasonPhrase.isEmpty() || !bare->body.isEmpty()) {
         std::printf("Reason-less status line should parse with empty reason.\n");
         return 1;
     }

@@ -1,6 +1,7 @@
 #include "URL.h"
 #include <ProtocolPorts.h>
 #include <QDebug>
+#include <QUrl>
 
 URL::URL(QObject *parent)
     : QObject(parent)
@@ -93,6 +94,27 @@ bool URL::parse(const QString &raw)
              << "fragment:" << m_parsed.fragment;
             
     return true;
+}
+
+std::optional<QString> URL::resolveReference(const QString &reference,
+                                             QString &errorMessage) const
+{
+    if (m_url.isEmpty() || reference.trimmed().isEmpty()) {
+        errorMessage = QStringLiteral("redirect URL or current page URL is empty");
+        return std::nullopt;
+    }
+
+    // QUrl resolves absolute, root-relative, and path-relative HTTP Location values.
+    const QUrl base(m_url);
+    const QUrl destination = base.resolved(QUrl(reference));
+    const QString scheme = destination.scheme().toLower();
+    if (!destination.isValid() || destination.host().isEmpty() ||
+        (scheme != QStringLiteral("http") && scheme != QStringLiteral("https"))) {
+        errorMessage = QStringLiteral("redirect Location is not a valid HTTP(S) URL");
+        return std::nullopt;
+    }
+
+    return destination.toString(QUrl::FullyEncoded);
 }
 
 void URL::url_write(const QString &new_url)

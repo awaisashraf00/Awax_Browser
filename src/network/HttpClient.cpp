@@ -1,7 +1,5 @@
 #include "HttpClient.h"
-
-// Builds the HTTP request line and required Host header from parsed URL
-// components; the fragment is intentionally absent because it is client-side.
+#include "HttpResponseParser.h"
 QByteArray HttpClient::buildRequest(const QString &host,
                                     quint16 port,
                                     const QString &path,
@@ -23,14 +21,13 @@ QByteArray HttpClient::buildRequest(const QString &host,
     return request;
 }
 
-
 bool HttpClient::sendRequest(int socketFd,
                              const QString &host,
                              quint16 port,
                              const QString &path,
                              const QString &query,
                              QString &errorMessage,
-                             QString &ser_res) const
+                             HttpResponse &response) const
 {
     if (socketFd < 0 || host.isEmpty() || port == 0 || !path.startsWith('/')) {
         errorMessage = QStringLiteral("invalid socket or HTTP request target");
@@ -42,79 +39,81 @@ bool HttpClient::sendRequest(int socketFd,
         errorMessage = QStringLiteral("HTTP request components contain a line break");
         return false;
     }
-    // port = 8000;
     const QByteArray request = buildRequest(host, port, path, query);
-    
+
     qsizetype bytesSent = 0;
     while (bytesSent < request.size()) {
         const ssize_t result = ::send(socketFd,
             request.constData() + bytesSent,
             static_cast<size_t>(request.size() - bytesSent),
             0);
-            if (result < 0) {
-                if (errno == EINTR) {
-                    continue;
-                }
-                errorMessage = QStringLiteral("send: %1")
-                .arg(QString::fromLocal8Bit(std::strerror(errno)));
-                return false;
+        if (result < 0) {
+            if (errno == EINTR) {
+                continue;
             }
-            if (result == 0) {
-                errorMessage = QStringLiteral("send: connection closed before request was written");
-                return false;
-            }
-            bytesSent += result;        
+            errorMessage = QStringLiteral("send: %1")
+            .arg(QString::fromLocal8Bit(std::strerror(errno)));
+            return false;
+        }
+        if (result == 0) {
+            errorMessage = QStringLiteral("send: connection closed before request was written");
+            return false;
+        }
+        bytesSent += result;
     }
 
-    if(receiveRequest(socketFd,errorMessage,ser_res)){
-        qDebug()<<"Receive Request Recieved";
-    }else{
-        qDebug()<<"Receive Request Failed";
-    }
-    return true;
-
+    return receiveAndParse(socketFd, response, errorMessage);
 }
-
-bool HttpClient::receiveRequest(int socketFd,
-    QString &errorMessage,
-    QString &ser_res) const
+bool HttpClient::receiveAndParse(int socketFd,
+                                 struct HttpResponse &response,
+                                 QString &errorMessage) const
 {
-    QByteArray responseBuffer;
-    responseBuffer.resize(4096); // Make space for recv() to write into.
-    
+    QByteArray rawResponse;
+
+    QByteArray chunk;
+    chunk.resize(4096);
+
     while (true) {
         const ssize_t bytesReceived = ::recv(
                 socketFd,
-                responseBuffer.data(),   
-                static_cast<size_t>(responseBuffer.size()),
+                chunk.data(),
+                static_cast<size_t>(chunk.size()),
                 0);
         if (bytesReceived < 0) {
             if (errno == EINTR) {
                 continue;
             }
-            errorMessage = QStringLiteral("recieve: %1")
+            errorMessage = QStringLiteral("recv: %1")
             .arg(QString::fromLocal8Bit(std::strerror(errno)));
-            qDebug() << errorMessage << "Http received Buffer" ;   
             return false;
         }
-
         if (bytesReceived == 0) {
             break;
         }
-        ser_res += QByteArray(responseBuffer.constData(), bytesReceived);
+        rawResponse.append(chunk.constData(), bytesReceived);
     }
-    Parse_Request(ser_res);
+
+    if (rawResponse.isEmpty()) {
+        errorMessage = QStringLiteral("server closed the connection without sending a response");
+        return false;
+    }
+
+    qDebug()<< "  <----   RAW RESPOMSE     ---->";
+    qDebug()<< "  <-------->";
+    qDebug() << rawResponse;
+    qDebug()<< "  <-------->";
+    
+
+    HttpResponseParser parser;
+    const std::optional<HttpResponse> parsed = parser.parse(rawResponse, errorMessage);
+    if (!parsed.has_value()) {
+
+        return false;
+    }
+    response = std::move(*parsed);
+
+    qDebug() << "HTTP" << response.statusCode << response.reasonPhrase
+             << "| headers:" << response.headers.size()
+             << "| body bytes:" << response.body.size();
     return true;
-    
-}
-
-bool HttpClient::Parse_Request(QString &ser_res) const {
-
-// "HTTP/1.0 308 Permanent Redirect\r\nContent-Type: text/plain\r\nLocation:
-//  https://uppbeat.io/\r\nRefresh: 0;
-// url=https://uppbeat.io/\r\nserver: Vercel\r\n\r\nRedirecting..."
-    struct HttpResponse m_parsed_http;
-    
-
-    return false;
 }
