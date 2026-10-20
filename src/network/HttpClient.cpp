@@ -29,7 +29,8 @@ bool HttpClient::sendRequest(int socketFd,
                              quint16 port,
                              const QString &path,
                              const QString &query,
-                             QString &errorMessage) const
+                             QString &errorMessage,
+                             QString &ser_res) const
 {
     if (socketFd < 0 || host.isEmpty() || port == 0 || !path.startsWith('/')) {
         errorMessage = QStringLiteral("invalid socket or HTTP request target");
@@ -62,12 +63,24 @@ bool HttpClient::sendRequest(int socketFd,
                 errorMessage = QStringLiteral("send: connection closed before request was written");
                 return false;
             }
-            bytesSent += result;
+            bytesSent += result;        
     }
+
+    if(receiveRequest(socketFd,errorMessage,ser_res)){
+        qDebug()<<"Receive Request Recieved";
+    }else{
+        qDebug()<<"Receive Request Failed";
+    }
+    return true;
+
+}
+
+bool HttpClient::receiveRequest(int socketFd,
+    QString &errorMessage,
+    QString &ser_res) const
+{
     QByteArray responseBuffer;
     responseBuffer.resize(4096); // Make space for recv() to write into.
-
-    qsizetype bytesRecieved{0};
     
     while (true) {
         const ssize_t bytesReceived = ::recv(
@@ -81,12 +94,27 @@ bool HttpClient::sendRequest(int socketFd,
             }
             errorMessage = QStringLiteral("recieve: %1")
             .arg(QString::fromLocal8Bit(std::strerror(errno)));
+            qDebug() << errorMessage << "Http received Buffer" ;   
             return false;
         }
+
         if (bytesReceived == 0) {
             break;
         }
-        qDebug() << QByteArray(responseBuffer.constData(), bytesReceived);   
+        ser_res += QByteArray(responseBuffer.constData(), bytesReceived);
     }
+    Parse_Request(ser_res);
     return true;
+    
+}
+
+bool HttpClient::Parse_Request(QString &ser_res) const {
+
+// "HTTP/1.0 308 Permanent Redirect\r\nContent-Type: text/plain\r\nLocation:
+//  https://uppbeat.io/\r\nRefresh: 0;
+// url=https://uppbeat.io/\r\nserver: Vercel\r\n\r\nRedirecting..."
+    struct HttpResponse m_parsed_http;
+    
+
+    return false;
 }

@@ -22,7 +22,11 @@ qt_add_executable(Awax_browser
     src/network/DnsResolver.h
     src/network/DnsResolver.cpp 
     src/network/TcpConnection.h
-    src/network/TcpConnection.cpp 
+    src/network/TcpConnection.cpp
+    src/network/HttpResponse.h
+    src/network/HttpResponse.cpp
+    src/network/HttpResponseParser.h
+    src/network/HttpResponseParser.cpp
     src/browser/Browser.cpp
     src/browser/Browser.h
 )
@@ -78,3 +82,16 @@ add_executable(test_http_client
 target_include_directories(test_http_client PRIVATE src/network)
 target_link_libraries(test_http_client PRIVATE Qt6::Core)
 add_test(NAME http_client COMMAND test_http_client)
+
+# Response parser test: links only Qt6::Core so the parser can be exercised
+# against raw byte fixtures without opening a socket or the browser window.
+add_executable(test_http_response_parser
+    tests/test_http_response_parser.cpp
+    src/network/HttpResponseParser.cpp
+    src/network/HttpResponseParser.h
+    src/network/HttpResponse.cpp
+    src/network/HttpResponse.h
+)
+target_include_directories(test_http_response_parser PRIVATE src/network)
+target_link_libraries(test_http_response_parser PRIVATE Qt6::Core)
+add_test(NAME http_response_parser COMMAND test_http_response_parser)

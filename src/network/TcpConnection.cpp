@@ -7,8 +7,6 @@ TcpConnection::TcpConnection(QObject *parent)
     QThread::currentThread()->setObjectName("TCP THREAD");
 }
 
-// Releases the socket descriptor owned by this connection worker, if one was
-// successfully created, so the operating system can reclaim the TCP endpoint.
 TcpConnection::~TcpConnection()
 {
     if (fd >= 0) {
@@ -16,8 +14,7 @@ TcpConnection::~TcpConnection()
     }
 }
 
-// Completes the transport connection and, for plain HTTP, sends the first
-// request. HTTPS must wait for a TLS layer; raw HTTP bytes are not safe there.
+
 void TcpConnection::connectToHost(const QHostAddress &ip,
                                   quint16 port,
                                   QString host,
@@ -77,13 +74,19 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
     emit connected();
     
     QString errorMessage;
-    if (!httpClient.sendRequest(fd, host, port, path, query, errorMessage)) {
+    QString Server_Received_Response;
+
+    if (!httpClient.sendRequest(fd, host, port, path, query, errorMessage, Server_Received_Response)) {
         emit Is_failed(errorMessage);
         qDebug()<< errorMessage;
         ::close(fd);
         fd = -1;
     }else{
         qDebug()<< " request sent to --->" << host;
+        qDebug()<< "  <-------->";
+        emit Response_Resceived(Server_Received_Response);
+        qDebug()<< Server_Received_Response ;
+        qDebug()<< "  <-------->";
     }
 
 }

@@ -35,6 +35,7 @@ signals:
     void connected();
     void Is_failed(const QString &reason);
     void Is_closed();
+    void Response_Resceived(const QString &res);
 
 private:
     HttpClient httpClient;
