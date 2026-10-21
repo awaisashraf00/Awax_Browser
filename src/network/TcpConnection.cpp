@@ -100,3 +100,8 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
     fd = -1;
     emit Is_closed();
 }
+// http://httpforever.com
+// http://httpforever.com
+// http://httpforever.com
+// http://httpforever.com
+// http://httpforever.com

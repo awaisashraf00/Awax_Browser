@@ -37,7 +37,10 @@ qt_add_qml_module(Awax_browser
     NO_LINT
     QML_FILES
         qml/Main.qml
-        qml/SearchArea/SearchArea.qml
+        qml/BrowserToolbar.qml
+        qml/AddressBar.qml
+        qml/IconButton.qml
+        qml/SafariIcon.qml
 )
 
 target_include_directories(Awax_browser PRIVATE
