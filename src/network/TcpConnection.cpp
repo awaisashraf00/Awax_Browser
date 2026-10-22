@@ -28,14 +28,16 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
         fd = -1;
     }
 
-    // if (scheme == QStringLiteral("https")) {
-    //     emit Is_failed(QStringLiteral("HTTPS requires TLS, which is not implemented yet"));
-    //     return;
-    // }
-    // if (scheme != QStringLiteral("http")) {
-    //     emit Is_failed(QStringLiteral("unsupported URL scheme"));
-    //     return;
-    // }
+    if (scheme == QStringLiteral("https")) {
+        emit Is_failed(QStringLiteral("HTTPS requires TLS, which is not implemented yet"));
+        port = 443;
+        return;
+    }
+    if (scheme != QStringLiteral("http")) {
+        port = 80;
+        emit Is_failed(QStringLiteral("unsupported URL scheme"));
+        return;
+    }
 
     fd = ::socket(AF_INET, SOCK_STREAM, 0);
     if (fd < 0) {
@@ -43,9 +45,6 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
         return;
     }
 
-    // setsockopt configures SO_NOSIGPIPE so macOS reports a closed-peer write
-    // as EPIPE instead of terminating the browser with SIGPIPE; socklen_t is
-    // the POSIX type describing the option value's byte length.
     const int noSigPipe = 1;
     if (::setsockopt(fd, SOL_SOCKET, SO_NOSIGPIPE, &noSigPipe,
                      static_cast<socklen_t>(sizeof(noSigPipe))) < 0) {

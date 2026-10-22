@@ -103,9 +103,7 @@ Canvas {
         }
     }
 
-    // Appends a rounded-rectangle subpath (x, y, w, h, corner radius r) to
-    // the current path using quadratic curves for the corners. Context2D has
-    // no built-in rounded rect, so the toolbar icons share this helper.
+    
     function traceRoundedRect(ctx, x, y, w, h, r) {
         ctx.moveTo(x + r, y);
         ctx.lineTo(x + w - r, y);
