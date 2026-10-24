@@ -12,7 +12,9 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
     
     QThread::currentThread()->setObjectName("MAIN THREAD");
-
+    qDebug()<< "  ";
+    qDebug()<< QThread::currentThread()->objectName();
+    qDebug()<< "  ";
     BROWSER Browser;
     
     engine.rootContext()->setContextProperty("Main_Url", &Browser.Give_Url_address());

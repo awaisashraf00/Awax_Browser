@@ -1,10 +1,12 @@
 #pragma once
 
 #include<QThread>
+#include<TLSConnection.h>
 #include <QObject>
 #include <QHostAddress>
 #include <QString>
 #include <HttpClient.h>
+#include <TLSConnection.h>
 #include <QDebug>
 #include <arpa/inet.h>
 #include <cerrno>
@@ -41,6 +43,8 @@ signals:
 private:
     HttpClient httpClient;
     int fd{-1};
+    TLS Tls;
+
     // std::mutex mtx_lock;
     // std::thread m_worker;               
     // std::atomic<bool> m_running{false}; 

@@ -23,18 +23,22 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
 {
     // port = 8000;
 
-    if (fd >= 0) {
-        ::close(fd);
-        fd = -1;
-    }
-
     if (scheme == QStringLiteral("https")) {
         emit Is_failed(QStringLiteral("HTTPS requires TLS, which is not implemented yet"));
         port = 443;
         return;
     }
+
+    if (fd >= 0) {
+        ::close(fd);
+        fd = -1;
+    }
+    
+    QString errorMessage;
+    HttpResponse response;
+
+
     if (scheme != QStringLiteral("http")) {
-        port = 80;
         emit Is_failed(QStringLiteral("unsupported URL scheme"));
         return;
     }
@@ -72,23 +76,35 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
         fd = -1;
         return;
     }
+    
+    qDebug()<< "  ";
     qDebug()<< " Connected to --->" << host;
+    qDebug()<< "  ";
     
     emit connected();
     
-    QString errorMessage;
-    HttpResponse response;
-
-    if (!httpClient.sendRequest(fd, host, port, path, query, errorMessage, response)) {
-        emit Is_failed(errorMessage);
-        qDebug()<< errorMessage;
-        ::close(fd);
-        fd = -1;
-        return;
+    if(port == 443){
+        if(!Tls.Send_Request(fd, host, port, path, query, errorMessage, response)){
+            emit Is_failed(errorMessage);
+            qDebug()<< errorMessage;
+            ::close(fd);
+            fd = -1;
+            return;
+        }
+    }else if(port == 80){    
+        if (!httpClient.sendRequest(fd, host, port, path, query, errorMessage, response)) {
+            emit Is_failed(errorMessage);
+            qDebug()<< errorMessage;
+            ::close(fd);
+            fd = -1;
+            return;
+        }
     }
-
+    
+    qDebug()<< "  ";
     qDebug()<< " request sent to --->" << host;
-    qDebug()<< "  <----   RESPOMSE     ---->";
+    qDebug()<< "  ";
+    qDebug()<< "  <----   RESPOMSE    ---->";
     qDebug()<< "  <-------->";
     qDebug()<< response.body;
     qDebug()<< "  <-------->";
