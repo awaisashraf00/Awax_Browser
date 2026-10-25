@@ -23,12 +23,6 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
 {
     // port = 8000;
 
-    if (scheme == QStringLiteral("https")) {
-        emit Is_failed(QStringLiteral("HTTPS requires TLS, which is not implemented yet"));
-        port = 443;
-        return;
-    }
-
     if (fd >= 0) {
         ::close(fd);
         fd = -1;
@@ -83,22 +77,20 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
     
     emit connected();
     
-    if(port == 443){
-        if(!Tls.Send_Request(fd, host, port, path, query, errorMessage, response)){
-            emit Is_failed(errorMessage);
-            qDebug()<< errorMessage;
-            ::close(fd);
-            fd = -1;
-            return;
-        }
-    }else if(port == 80){    
-        if (!httpClient.sendRequest(fd, host, port, path, query, errorMessage, response)) {
-            emit Is_failed(errorMessage);
-            qDebug()<< errorMessage;
-            ::close(fd);
-            fd = -1;
-            return;
-        }
+    bool exchangeOk = false;
+    if (scheme == QStringLiteral("https")) {
+        // TLS borrows fd for the handshake and exchange; it does not close it.
+        exchangeOk = Tls.Send_Request(fd, host, port, path, query, errorMessage, response);
+    } else {
+        exchangeOk = httpClient.sendRequest(fd, host, port, path, query, errorMessage, response);
+    }
+
+    if (!exchangeOk) {
+        emit Is_failed(errorMessage);
+        qDebug()<< errorMessage;
+        ::close(fd);
+        fd = -1;
+        return;
     }
     
     qDebug()<< "  ";

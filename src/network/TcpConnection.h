@@ -6,7 +6,6 @@
 #include <QHostAddress>
 #include <QString>
 #include <HttpClient.h>
-#include <TLSConnection.h>
 #include <QDebug>
 #include <arpa/inet.h>
 #include <cerrno>
