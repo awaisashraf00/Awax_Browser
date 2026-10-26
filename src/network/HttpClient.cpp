@@ -1,5 +1,6 @@
 #include "HttpClient.h"
 #include "HttpResponseParser.h"
+
 QByteArray HttpClient::buildRequest(const QString &host,
                                     quint16 port,
                                     const QString &path,
