@@ -32,7 +32,7 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
     HttpResponse response;
 
 
-    if (scheme != QStringLiteral("http")) {
+    if (scheme != QStringLiteral("http") && scheme != QStringLiteral("https")) {
         emit Is_failed(QStringLiteral("unsupported URL scheme"));
         return;
     }
