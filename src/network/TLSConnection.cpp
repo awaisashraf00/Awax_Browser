@@ -13,7 +13,7 @@ QString lastOpenSslError()
     return QString::fromLocal8Bit(buffer);
 }
 
-} // namespace
+
 
 TLS::TLS(QObject *parent)
     : QObject(parent)
@@ -132,6 +132,22 @@ bool TLS::Send_Request(int socketFd,
         }
         const int reason = SSL_get_error(ssl, received);
         if (reason == SSL_ERROR_ZERO_RETURN) {
+            break; 
+        }
+        if (reason == SSL_ERROR_SSL &&
+            ERR_GET_REASON(ERR_peek_last_error()) == SSL_R_UNEXPECTED_EOF_WHILE_READING) {
+    
+    
+    
+    
+    
+            qDebug() << "TLS: server closed without close_notify -- treating as end of response";
+            break;
+        }
+        if (reason == SSL_ERROR_SYSCALL) {
+    
+    
+    
             break;
         }
         return fail(QStringLiteral("SSL_read failed (reason %1): %2")
@@ -142,7 +158,6 @@ bool TLS::Send_Request(int socketFd,
     if (rawResponse.isEmpty()) {
         return fail(QStringLiteral("server closed the TLS connection without sending a response"));
     }
-    // unchanged (it does), it proves the layering: TLS ends where HTTP begins.
     HttpResponseParser parser;
     const std::optional<HttpResponse> parsed = parser.parse(rawResponse, errorMessage);
     if (!parsed.has_value()) {

@@ -108,3 +108,21 @@ add_executable(test_http_response_parser
 target_include_directories(test_http_response_parser PRIVATE src/network)
 target_link_libraries(test_http_response_parser PRIVATE Qt6::Core)
 add_test(NAME http_response_parser COMMAND test_http_response_parser)
+
+# TLS handshake test: drives the real TLS::Send_Request path end-to-end
+# against a live host (default uppbeat.io) without opening the GUI.
+# Purpose: reproducing/debugging https failures in seconds from the console.
+add_executable(test_tls_handshake
+    tests/test_tls_handshake.cpp
+    src/network/TLSConnection.cpp
+    src/network/TLSConnection.h
+    src/network/HttpClient.cpp
+    src/network/HttpClient.h
+    src/network/HttpResponseParser.cpp
+    src/network/HttpResponseParser.h
+    src/network/HttpResponse.cpp
+    src/network/HttpResponse.h
+)
+target_include_directories(test_tls_handshake PRIVATE src/network src/url)
+target_link_libraries(test_tls_handshake PRIVATE Qt6::Core OpenSSL::SSL OpenSSL::Crypto)
+add_test(NAME tls_handshake COMMAND test_tls_handshake uppbeat.io)

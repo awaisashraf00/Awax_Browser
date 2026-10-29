@@ -92,7 +92,7 @@ void TcpConnection::connectToHost(const QHostAddress &ip,
         fd = -1;
         return;
     }
-    
+
     qDebug()<< "  ";
     qDebug()<< " request sent to --->" << host;
     qDebug()<< "  ";
