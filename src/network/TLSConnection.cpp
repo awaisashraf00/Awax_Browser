@@ -2,17 +2,18 @@
 #include "HttpResponseParser.h"
 
 namespace {
-QString lastOpenSslError()
-{
-    const unsigned long code = ERR_get_error();
-    if (code == 0) {
-        return QStringLiteral("no OpenSSL error recorded");
+    QString lastOpenSslError()
+    {
+        const unsigned long code = ERR_get_error();
+        if (code == 0) {
+            return QStringLiteral("no OpenSSL error recorded");
+        }
+        char buffer[256];
+        ERR_error_string_n(code, buffer, sizeof(buffer));
+        return QString::fromLocal8Bit(buffer);
     }
-    char buffer[256];
-    ERR_error_string_n(code, buffer, sizeof(buffer));
-    return QString::fromLocal8Bit(buffer);
 }
-
+//namespace
 
 
 TLS::TLS(QObject *parent)
@@ -136,11 +137,6 @@ bool TLS::Send_Request(int socketFd,
         }
         if (reason == SSL_ERROR_SSL &&
             ERR_GET_REASON(ERR_peek_last_error()) == SSL_R_UNEXPECTED_EOF_WHILE_READING) {
-    
-    
-    
-    
-    
             qDebug() << "TLS: server closed without close_notify -- treating as end of response";
             break;
         }

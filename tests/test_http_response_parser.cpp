@@ -90,7 +90,56 @@ int main()
         return 1;
     }
 
-    // ---- Test 3: status line without a reason phrase --------------------
+    // ---- Test 3: chunked response body ----------------------------------
+    const QByteArray chunkedResponse =
+        "HTTP/1.1 200 OK\r\n"
+        "Transfer-Encoding: chunked\r\n"
+        "\r\n"
+        "4\r\nWiki\r\n"
+        "5;source=test\r\npedia\r\n"
+        "0\r\n"
+        "X-Checksum: educational-example\r\n"
+        "\r\n";
+
+    const std::optional<HttpResponse> chunked = parser.parse(chunkedResponse, errorMessage);
+    if (!chunked.has_value()) {
+        std::printf("Chunked response failed to parse: %s\n",
+                    errorMessage.toUtf8().constData());
+        return 1;
+    }
+    if (chunked->body != "Wikipedia") {
+        std::printf("Chunk framing was not removed from the body: %s\n",
+                    chunked->body.constData());
+        return 1;
+    }
+
+    // ---- Test 4: malformed chunked response bodies ---------------------
+    const QByteArray malformedChunkedResponses[] = {
+        "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\n\r\nG\r\nx\r\n0\r\n\r\n",
+        "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\n\r\n4\r\nabc",
+        "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\n\r\n1\r\nxXX0\r\n\r\n",
+        "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\n\r\n0\r\n"
+    };
+    for (const QByteArray &malformedResponse : malformedChunkedResponses) {
+        const std::optional<HttpResponse> malformed =
+            parser.parse(malformedResponse, errorMessage);
+        if (malformed.has_value() || errorMessage.isEmpty()) {
+            std::printf("Malformed chunked response should fail with an error.\n");
+            return 1;
+        }
+    }
+
+    const QByteArray unsupportedTransferEncoding =
+        "HTTP/1.1 200 OK\r\n"
+        "Transfer-Encoding: gzip, chunked\r\n"
+        "\r\n";
+    if (parser.parse(unsupportedTransferEncoding, errorMessage).has_value() ||
+        errorMessage.isEmpty()) {
+        std::printf("Unsupported transfer codings should fail with an error.\n");
+        return 1;
+    }
+
+    // ---- Test 5: status line without a reason phrase --------------------
     const std::optional<HttpResponse> bare =
         parser.parse(QByteArray("HTTP/1.1 204\r\n\r\n"), errorMessage);
     if (!bare.has_value() || bare->statusCode != 204 ||
@@ -99,7 +148,7 @@ int main()
         return 1;
     }
 
-    // ---- Test 4: garbage must fail with a message, not crash ------------
+    // ---- Test 6: garbage must fail with a message, not crash ------------
     const std::optional<HttpResponse> incomplete =
         parser.parse(QByteArray("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n"),
                      errorMessage);
