@@ -78,5 +78,9 @@ int main(int argc, char *argv[])
     qDebug() << "TLS EXCHANGE OK:" << response.statusCode << response.reasonPhrase
              << "| headers:" << response.headers.size()
              << "| body bytes:" << response.body.size();
+    qDebug() << "Content-Type:"
+             << response.headerValue(QStringLiteral("Content-Type"))
+                    .value_or(QStringLiteral("missing"))
+             << "| body prefix:" << response.body.left(80);
     return 0;
 }

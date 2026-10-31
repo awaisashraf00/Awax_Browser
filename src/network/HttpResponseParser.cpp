@@ -189,13 +189,48 @@ std::optional<struct HttpResponse> HttpResponseParser::parse(
     }
 
     QStringList transferCodings;
+    QStringList contentLengthValues;
     for (const auto &header : response.headers) {
         if (header.first.compare(QStringLiteral("Transfer-Encoding"),
                                  Qt::CaseInsensitive) == 0) {
             for (const QString &coding : header.second.split(QLatin1Char(','))) {
                 transferCodings.append(coding.trimmed());
             }
+        } else if (header.first.compare(QStringLiteral("Content-Length"),
+                                        Qt::CaseInsensitive) == 0) {
+            for (const QString &length : header.second.split(QLatin1Char(','))) {
+                contentLengthValues.append(length.trimmed());
+            }
         }
+    }
+
+    if (!transferCodings.isEmpty() && !contentLengthValues.isEmpty()) {
+        errorMessage = QStringLiteral(
+            "response contains both Transfer-Encoding and Content-Length");
+        return std::nullopt;
+    }
+
+    std::optional<qulonglong> contentLength;
+    for (const QString &value : contentLengthValues) {
+        if (value.isEmpty()) {
+            errorMessage = QStringLiteral("response contains an empty Content-Length");
+            return std::nullopt;
+        }
+        const QByteArray lengthBytes = value.toLatin1();
+        for (const char digit : lengthBytes) {
+            if (digit < '0' || digit > '9') {
+                errorMessage = QStringLiteral("response contains an invalid Content-Length");
+                return std::nullopt;
+            }
+        }
+
+        bool lengthOk = false;
+        const qulonglong parsedLength = lengthBytes.toULongLong(&lengthOk);
+        if (!lengthOk || (contentLength && *contentLength != parsedLength)) {
+            errorMessage = QStringLiteral("response contains an invalid or conflicting Content-Length");
+            return std::nullopt;
+        }
+        contentLength = parsedLength;
     }
 
     if (!transferCodings.isEmpty()) {
@@ -210,6 +245,18 @@ std::optional<struct HttpResponse> HttpResponseParser::parse(
             return std::nullopt;
         }
     } else {
+        const bool statusHasNoBody =
+            (response.statusCode >= 100 && response.statusCode < 200) ||
+            response.statusCode == 204 || response.statusCode == 304;
+        if (statusHasNoBody && !body.isEmpty()) {
+            errorMessage = QStringLiteral("response status code must not include a body");
+            return std::nullopt;
+        }
+        if (contentLength && response.statusCode != 304 &&
+            *contentLength != static_cast<qulonglong>(body.size())) {
+            errorMessage = QStringLiteral("response body length does not match Content-Length");
+            return std::nullopt;
+        }
         response.body = body;
     }
 

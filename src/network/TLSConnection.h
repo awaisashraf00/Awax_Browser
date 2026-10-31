@@ -4,8 +4,9 @@
 #include <QDebug>
 #include "HttpResponse.h"
 #include "HttpClient.h"
-#include <openssl/ssl.h>   
-#include <openssl/err.h> 
+#include <memory>
+#include <openssl/ssl.h>
+#include <openssl/err.h>
 
 class TLS : public QObject
 {
@@ -13,7 +14,7 @@ class TLS : public QObject
 
 public:
     explicit TLS(QObject *parent = nullptr);
-    ~TLS() override;
+    ~TLS() override = default;
 
     bool Send_Request(int socketFd,
                       const QString &host,
@@ -32,9 +33,7 @@ private:
 
     SSL_CTX *ensureContext(QString &errorMessage);
 
-    SSL_CTX *context{nullptr};
-
-    SSL *ssl{nullptr};
+    std::unique_ptr<SSL_CTX, decltype(&SSL_CTX_free)> context{nullptr, SSL_CTX_free};
 
     HttpClient httpClient;
 };

@@ -90,6 +90,29 @@ int main()
         return 1;
     }
 
+    const QByteArray incompleteContentLengthResponse =
+        "HTTP/1.1 200 OK\r\n"
+        "Content-Length: 12\r\n"
+        "\r\n"
+        "<h1>Hi</h1>";
+    if (parser.parse(incompleteContentLengthResponse, errorMessage).has_value() ||
+        errorMessage.isEmpty()) {
+        std::printf("A Content-Length mismatch should fail with an error.\n");
+        return 1;
+    }
+
+    const QByteArray ambiguousFramingResponse =
+        "HTTP/1.1 200 OK\r\n"
+        "Transfer-Encoding: chunked\r\n"
+        "Content-Length: 0\r\n"
+        "\r\n"
+        "0\r\n\r\n";
+    if (parser.parse(ambiguousFramingResponse, errorMessage).has_value() ||
+        errorMessage.isEmpty()) {
+        std::printf("Conflicting response framing headers should fail.\n");
+        return 1;
+    }
+
     // ---- Test 3: chunked response body ----------------------------------
     const QByteArray chunkedResponse =
         "HTTP/1.1 200 OK\r\n"
